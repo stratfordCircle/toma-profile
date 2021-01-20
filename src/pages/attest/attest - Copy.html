@@ -1,0 +1,115 @@
+<!--
+  Generated template for the AttestPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>CME Attestation for <strong>{{this.conferenceNameForQuery}}</strong></ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+<!-- hideBackButton="true" -->
+
+// IF WE NEED TO BRING BACK THE FIRST ATTESTATION FORM THE DETAILS ARE IN HERE
+
+
+<ion-header>
+  <ion-navbar class="navbarStyle" >
+    <ion-title>
+      <ion-label class="print-greeting-landing" text-wrap>
+        <ion-row>
+          <ion-col col-bottom col-4>
+              <img src="../../assets/imgs/TOMAlogo.jpg" height="65">
+          </ion-col>
+          <ion-col col-bottom col-8>{{ this.conferenceNameForQuery }}</ion-col>
+        </ion-row>
+      </ion-label>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+        <form id="dynamicConference">
+<ion-row>
+  <ion-col col-3>
+    <ion-row>
+    <ion-col col-6 class="col-title">Date</ion-col>
+    <ion-col col-6 class="col-title">Time</ion-col>
+    </ion-row>
+</ion-col>
+  <ion-col col-9>
+    <ion-row>
+    <ion-col col-8 class="col-title">Description</ion-col>
+    <!-- <ion-col col-2 class="col-title">Accreditor</ion-col> -->
+    <ion-col col-2 text-center class="col-title">Credits</ion-col>
+    <ion-col col-2 text-center class="col-title">Attest</ion-col>
+  </ion-row>
+  </ion-col>
+</ion-row>
+
+<!-- let newParse = this.supporting_doc.indexOf('"|'); // this is the character number of the end of the full path for one support doc
+let newAssembly = this.supporting_doc.substring(1,newParse); // this is one support doc
+
+let getName1 = newAssembly.indexOf(this.aoa_number);
+
+let getName2 = newAssembly.substring(getName1 + 1);
+
+string.split(subString, index).join(subString).length;
+
+  record.description.substring(record.description.split('-', 2).join('-').length + 1);
+ -->
+       <ion-row class="row-custom-bg" *ngFor="let record of editRecords">
+        <!-- ==>  {{record.id}} = {{record.courseCredit}} <br> -->
+        <!-- CAN I DYNAMICALLY CREATE THE INPUT ID AND MAKE IT THE SAME AS THE RECORD ID? (OR DO i EVEN NEED IT?)
+        PROBABLY NEED IT - AND NEED TO THINK OF THIS AS A ONE PAGE SUBMIT FORM (OR MULTIPLE PAGE SUBMIT) -->  
+      <ion-col col-3>
+        <ion-row>
+        <ion-col col-6>{{record.ce_date | date:'MM/dd/yyyy' }}</ion-col>
+        <ion-col col-6>{{record.description.substring(0,record.description.split('-', 2).join('-').length)}}</ion-col>
+      </ion-row>
+      </ion-col>
+      <ion-col col-9>
+        <ion-row>
+        <ion-col col-8>{{record.description.substring(record.description.split('-', 2).join('-').length + 1)}}</ion-col>
+        <!-- <ion-col col-2>{{record.accreditor}} </ion-col> -->
+
+     <!--    CHANGE TO RADIO BUTTON SELECTION FOR EACH PAIRED SET
+        TRY TO SET THE ID OF THE RADIO SET TO THE RECORD.ID
+        THEN PASS THE VALUE OF THE SELECTED 
+        THAT MIGHT LET US USE THE SAME BACKEND UPDATE -->
+       <!--  <ion-row> -->
+        <ion-col col-2 text-center class="creditSize"> {{record.courseCredit}}
+           <!--  <input id='{{record.id}}' size="3" type="text" value="{{record.courseCredit}}"> -->
+            <!-- IF WE DON'T CHANGE THE ID OR VALUE SETTINGS HERE THEN THE SAVE AND UPDATE FUNCTIONS WILL WORK -->
+        </ion-col>
+        <!-- [ngStyle]="{'background-color': getColor(record.session)}" -->
+        <ion-col text-center col-2>
+            <!-- <input id='{{record.id}}' type="checkbox" name="{{record.session}}" value="{{record.courseCredit}}" (click)="concurrentCheck(record.session)"> --> <!-- {{record.session}} -->
+            <!-- <div *ngIf="this.alreadySigned !== true"> -->
+<!--             *ngIf="{{!record.checked}}"
+            *ngIf="{{record.checked}}" -->
+            <input *ngIf="record.checked === true" checked id='{{record.id}}' type="checkbox" name="{{record.session}}" value="{{record.courseCredit}}" (click)="concurrentCheck(record.session)"> 
+            <input *ngIf="record.checked !== true" id='{{record.id}}' type="checkbox" name="{{record.session}}" value="{{record.courseCredit}}" (click)="concurrentCheck(record.session)"> 
+            <!-- <input id='Y1OguXVXxq3dKHZ1yv3J' type="checkbox" name="5" value="23" (click)="concurrentCheck('5')"> --> <!-- {{record.session}} -->
+            <!-- {{record.id}} --> <!-- {{record.courseCredit}} -->
+            
+        <!-- <ion-input id='{{record.id}}' name='{{record.id}}' [(ngModel)]="hours1" type="text" value="{{record.courseCredit}}"></ion-input> --> <!--  (ionChange)="saveNotice(record.id,'0conHrsFS30kFX6kNkzU')"> -->
+        </ion-col>
+      </ion-row>
+       </ion-col>                
+         </ion-row>
+        </form>
+       <!--  <ion-input *ngIf="this.memberEditAsConference" min=".25" max="100" step=".25" type="number" formControlName="hours1" [(ngModel)]="hours1"></ion-input> -->
+        <!-- {{record.id}} -->
+        
+        <p>By clicking 'I Attest', I am confirming that the CME credits entered in this form are correct.</p>
+        <button ion-button color="secondary" (click)="saveNotice($event)">I Attest</button>
+        <!-- <button ion-button color="secondary" (click)="setAllCheckboxes('TOMA/TXACOFP 12th Annual Convention')">set checks</button> -->
+
+</ion-content>

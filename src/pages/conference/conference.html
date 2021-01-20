@@ -1,0 +1,202 @@
+<!--      <ion-title>
+    <ion-label text-wrap>
+    <ion-col col-11>asdf</ion-col>
+    </ion-label>
+    </ion-title> -->
+
+<!-- <ion-header>
+    <ion-navbar color="client-primary" hideBackButton="true">
+      <ion-title>
+          <ion-label text-wrap>
+        <ion-row>
+          <ion-col col-11>&nbsp;_&nbsp;</ion-col>
+          <ion-col col-1>
+          </ion-col>
+        </ion-row>
+        </ion-label>
+      </ion-title>
+    </ion-navbar>
+  </ion-header> -->
+<!-- <ion-header></ion-header>
+
+    <ion-title>
+        <ion-label text-wrap>
+          <ion-row>
+            <ion-col class="conferenceLabel" align-self-start text-center>
+              POFPS Annual CME Symposium 2018
+            </ion-col>
+            <ion-col col-3></ion-col>
+          </ion-row> -->
+<!--       </ion-label>
+    </ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<!-- <ion-header>
+  <ion-navbar color="client-primary" hideBackButton="true">
+    <ion-title>
+      <ion-label text-wrap>
+        <ion-grid>
+        <ion-row>
+          <ion-col col-3 align-self-start>
+            <img height="75" src="../../assets/icon/icon-192x192.png">
+           </ion-col>
+          <ion-col class="conferenceLabel" col-6 align-self-start text-center>
+            POMA Clinical Assembly - 2018
+          </ion-col>
+          <ion-col col-3></ion-col>
+        </ion-row>
+        <ion-row><ion-col align-self-end col-12>Attestation for: <i> {{this.greeting}} </i></ion-col></ion-row>
+      </ion-grid>
+      </ion-label>
+    </ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+
+  <!-- dayOneAvailable = new Date("May 2 2018 6:00:00");
+  dayTwoAvailable = new Date("May 3 2018 6:00:00");
+  dayThreeAvailable = new Date("May 4 2018 6:00:00");
+  dayFourAvailable = new Date("May 5 2018 6:00:00");
+  currentLocalTime = new Date(); //Date.now(); //1482905176396 -->
+
+<ion-content class="no-scroll">
+
+<!--   <h2>The Online Clinical Assembly Attestation form is now closed. To attest for credits for 2018, please submit your attestation form to: <a href="mailto:cme@poma.org?Subject=Looking%20For%20Online%20Attestation" target="_top">cme@poma.org</a> </h2> -->
+
+<!--   <ion-row>
+      <ion-col col-3></ion-col>
+      <ion-col col-6><button  
+        ion-button
+        small
+        block
+        color="secondary" (click)="mainCMEPage()">
+        ... take me back to My CME Home Page
+        </button></ion-col>
+      <ion-col col-3></ion-col>
+
+    </ion-row> -->
+<div class="cert-style">
+
+    <div *ngIf="this.conferenceName === 'mw_2019'">
+        <summary></summary>
+    </div>
+
+<!--     <div *ngIf="this.conferenceName === 'pofps_2018'">
+        
+      <pofps-cert></pofps-cert>
+
+    </div> -->
+  </div>
+  <!-- <div *ngIf="(this.currentLocalTime > this.dayOneAvailable) && (this.activePage !== 5)" >    
+    <br><br>
+    <ion-grid>
+    <ion-row><ion-col col-1></ion-col><ion-col col-11>
+        <div class="sessionLabel">Instructions:</div>
+        1. Click the sessions you attend. Green checkbox indicates you attended. <br>
+        2. Selections are saved immediately. Un-check if you click the wrong session. <br>
+        3. Starting Saturday morning, you'll see an option to digitally sign your attestation. <br>
+        4. Credits will appear in your CME report after approval. <br>
+        <i>(BEST USED WITH Chrome, Safari, or FireFox)</i>
+        <br>
+    </ion-col></ion-row>
+    </ion-grid>
+    </div>
+  
+<ion-grid >
+  <ion-row text-center>
+
+    <ion-col>
+      <ion-icon class="menu-arrows" *ngIf="this.activePage > 1" (click)="changeDay(this.activePage-1);" name="arrow-dropleft-circle"></ion-icon>
+        <button color="client-primary" *ngIf="(this.activePage === 1) && (this.currentLocalTime > this.dayTwoAvailable)" ion-button (click)="changeDay(1);">Wednesday, May 2nd</button>
+        <ion-icon class="menu-arrows" *ngIf="(this.activePage === 1) && (this.currentLocalTime > this.dayTwoAvailable)" (click)="changeDay(this.activePage+1);" name="arrow-dropright-circle"></ion-icon>
+        <button color="client-primary" *ngIf="(this.activePage === 2) && (this.currentLocalTime > this.dayTwoAvailable)" ion-button (click)="changeDay(2);">Thursday, May 3rd</button>
+        <ion-icon class="menu-arrows" *ngIf="(this.activePage === 2) && (this.currentLocalTime > this.dayThreeAvailable)" (click)="changeDay(this.activePage+1);" name="arrow-dropright-circle"></ion-icon>
+        <button color="client-primary" *ngIf="(this.activePage === 3) && (this.currentLocalTime > this.dayThreeAvailable)" ion-button (click)="changeDay(3);">Friday, May 4th</button>
+        <ion-icon class="menu-arrows" *ngIf="(this.activePage === 3) && (this.currentLocalTime > this.dayFourAvailable)" (click)="changeDay(this.activePage+1);" name="arrow-dropright-circle"></ion-icon>
+      <button color="client-primary" *ngIf="(this.activePage === 4) && (this.currentLocalTime > this.dayFourAvailable)" ion-button (click)="changeDay(4);">Saturday, May 5th</button>
+      <ion-icon class="menu-arrows" *ngIf="(this.activePage === 4) && (this.currentLocalTime > this.attestationDateAvailable)" (click)="changeDay(this.activePage+1);" name="arrow-dropright-circle"></ion-icon>
+    <button color="client-primary" *ngIf="(this.activePage === 5) && (this.currentLocalTime > this.attestationDateAvailable)" ion-button (click)="changeDay(5);">Attestation Page</button>
+    </ion-col>
+    
+  </ion-row>
+</ion-grid>
+
+<ion-grid>
+  <div *ngIf="this.currentLocalTime > this.dayOneAvailable">
+    <div *ngIf="this.activePage === 1">
+      <day-one></day-one>
+    </div>
+  </div>    
+    <div *ngIf="this.activePage === 2">
+      <day-two></day-two>
+    </div>
+    <div *ngIf="this.activePage === 3">
+      <day-three></day-three>
+    </div>
+    <div *ngIf="this.activePage === 4">
+      <day-four></day-four>
+    </div>
+    <div *ngIf="this.activePage === 5">
+      <summary ></summary>
+    </div>
+</ion-grid>
+
+    <ion-grid >
+      <ion-row text-center>
+    
+        <ion-col>
+          <ion-icon class="menu-arrows" *ngIf="(this.activePage > 1) && (this.activePage !== 5)" (click)="changeDay(this.activePage-1);" name="arrow-dropleft-circle"></ion-icon>
+            <button color="client-primary" *ngIf="(this.activePage === 1) && (this.currentLocalTime > this.dayTwoAvailable)" ion-button (click)="changeDay(1);">Wednesday, May 2nd</button>
+              <ion-icon class="menu-arrows" *ngIf="(this.activePage === 1) && (this.currentLocalTime > this.dayTwoAvailable)" (click)="changeDay(this.activePage+1);" name="arrow-dropright-circle"></ion-icon>
+            <button color="client-primary" *ngIf="(this.activePage === 2) && (this.currentLocalTime > this.dayTwoAvailable)" ion-button (click)="changeDay(2);">Thursday, May 3rd</button>
+              <ion-icon class="menu-arrows" *ngIf="(this.activePage === 2) && (this.currentLocalTime > this.dayThreeAvailable)" (click)="changeDay(this.activePage+1);" name="arrow-dropright-circle"></ion-icon>
+            <button color="client-primary" *ngIf="(this.activePage === 3) && (this.currentLocalTime > this.dayThreeAvailable)" ion-button (click)="changeDay(3);">Friday, May 4th</button>
+            <ion-icon class="menu-arrows" *ngIf="(this.activePage === 3) && (this.currentLocalTime > this.dayFourAvailable)" (click)="changeDay(this.activePage+1);" name="arrow-dropright-circle"></ion-icon>
+            <button color="client-primary" *ngIf="(this.activePage === 4) && (this.currentLocalTime > this.dayFourAvailable)" ion-button (click)="changeDay(4);">Saturday, May 5th</button>
+            <ion-icon class="menu-arrows" *ngIf="(this.activePage === 4) && (this.currentLocalTime > this.attestationDateAvailable)" (click)="changeDay(this.activePage+1);" name="arrow-dropright-circle"></ion-icon>
+        </ion-col>
+        
+      </ion-row>
+    </ion-grid>
+    
+    <div *ngIf="this.currentLocalTime > this.dayOneAvailable">    
+<br><br>
+
+
+<ion-grid>
+
+<ion-row><ion-col col-1></ion-col>
+  <ion-col col-11>
+    <b>Maximum credits available for the entire conference:</b> <br>
+    21.75 CAT. 1A; 7.75 CAT. 1A PS; 2.5 CAT. 1A OP; 2 CAT 1A CA*; 6 CAT. 1B <br>
+    <b>KEY:</b><br>
+    .25 = 15 minutes .50 = 30 minutes .75 = 45 minutes 1 = 60 minutes <br>
+    PS = Patient safety credit OP = Opioid Credit CA = Child abuse credit <br>   
+  </ion-col></ion-row>        
+  <ion-row><ion-col text-center>
+      <button color="client-primary" small *ngIf="(this.currentLocalTime > this.attestationDateAvailable) && (this.activePage !== 5)" ion-button class="activeHighLight" (click)="changeDay(5);">Attestation Page</button>
+  </ion-col></ion-row>
+
+    <br>
+    <ul>
+    <li>No certificate or CME will be awarded until this form is completed and digitally signed.</li>
+    <li>No attendance certificate or CME credit will be awarded to students or interns/residents.</li>
+
+    </ul> 
+
+</ion-grid>
+</div>
+    
+<ion-row>
+  <ion-col col-4></ion-col>
+  <ion-col col-4><button  
+    ion-button
+    small
+    block
+    color="secondary" (click)="mainCMEPage()">
+    ... back to My CME Home Page
+    </button></ion-col>
+  <ion-col col-4></ion-col>
+</ion-row> -->
+</ion-content>

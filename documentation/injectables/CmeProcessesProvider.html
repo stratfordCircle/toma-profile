@@ -1,0 +1,2389 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>org.txosteo.tomaprofile documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">org.txosteo.tomaprofile documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>CmeProcessesProvider</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/providers/cme-processes/cme-processes.ts</code>
+        </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#_COLL">_COLL</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_CONTENT">_CONTENT</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_DB">_DB</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#cmeRecords">cmeRecords</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#confProv">confProv</a>
+                            </li>
+                            <li>
+                                <a href="#courses">courses</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#datepipe">datepipe</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#http">http</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#srk">srk</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#buildOneConferenceDay">buildOneConferenceDay</a>
+                            </li>
+                            <li>
+                                <a href="#convertAttestationSheets">convertAttestationSheets</a>
+                            </li>
+                            <li>
+                                <a href="#convertPOFPSattestationSheets">convertPOFPSattestationSheets</a>
+                            </li>
+                            <li>
+                                <a href="#displayAlert">displayAlert</a>
+                            </li>
+                            <li>
+                                <a href="#exportDBtoFile">exportDBtoFile</a>
+                            </li>
+                            <li>
+                                <a href="#importFirebasefromGoogleSheets">importFirebasefromGoogleSheets</a>
+                            </li>
+                            <li>
+                                <a href="#loginFB">loginFB</a>
+                            </li>
+                            <li>
+                                <a href="#registerFB">registerFB</a>
+                            </li>
+                            <li>
+                                <a href="#runBackUpBatches">runBackUpBatches</a>
+                            </li>
+                            <li>
+                                <a href="#saveTextAsFile">saveTextAsFile</a>
+                            </li>
+                            <li>
+                                <a href="#updateFirebasefromGoogleSheets">updateFirebasefromGoogleSheets</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(http: <a href="https://angular.io/api/http/Http" target="_blank">Http</a>, cookieService: CookieService, _DBP: <a href="../injectables/DatabaseProvider.html">DatabaseProvider</a>, confProv: <a href="../injectables/ConfDaysProcessesProvider.html">ConfDaysProcessesProvider</a>, datepipe: <a href="https://angular.io/api/common/DatePipe" target="_blank">DatePipe</a>, _ALERT: AlertController, srk: <a href="../injectables/SrkServicesProvider.html">SrkServicesProvider</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/providers/cme-processes/cme-processes.ts:27</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/http/Http" target="_blank" >Http</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cookieService</td>
+                                                  
+                                                        <td>
+                                                                    <code>CookieService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_DBP</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/DatabaseProvider.html" target="_self" >DatabaseProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>confProv</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/ConfDaysProcessesProvider.html" target="_self" >ConfDaysProcessesProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>datepipe</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/common/DatePipe" target="_blank" >DatePipe</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_ALERT</td>
+                                                  
+                                                        <td>
+                                                                    <code>AlertController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>srk</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/SrkServicesProvider.html" target="_self" >SrkServicesProvider</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="buildOneConferenceDay"></a>
+                        <span class="name">
+                            <b>
+                            buildOneConferenceDay
+                            </b>
+                            <a href="#buildOneConferenceDay"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>buildOneConferenceDay(conferenceDay: , ce_date: , aoa_number: , credit_type1: , hours1: , description: , session: )</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="809" class="link-to-prism">src/providers/cme-processes/cme-processes.ts:809</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>conferenceDay</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>ce_date</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>aoa_number</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>credit_type1</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>hours1</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>description</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>session</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="convertAttestationSheets"></a>
+                        <span class="name">
+                            <b>
+                            convertAttestationSheets
+                            </b>
+                            <a href="#convertAttestationSheets"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>convertAttestationSheets()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="160" class="link-to-prism">src/providers/cme-processes/cme-processes.ts:160</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="convertPOFPSattestationSheets"></a>
+                        <span class="name">
+                            <b>
+                            convertPOFPSattestationSheets
+                            </b>
+                            <a href="#convertPOFPSattestationSheets"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>convertPOFPSattestationSheets()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="815" class="link-to-prism">src/providers/cme-processes/cme-processes.ts:815</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayAlert"></a>
+                        <span class="name">
+                            <b>
+                            displayAlert
+                            </b>
+                            <a href="#displayAlert"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>displayAlert(title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="773" class="link-to-prism">src/providers/cme-processes/cme-processes.ts:773</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>title</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>message</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="exportDBtoFile"></a>
+                        <span class="name">
+                            <b>
+                            exportDBtoFile
+                            </b>
+                            <a href="#exportDBtoFile"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>exportDBtoFile(collectionObj: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, searchCriteria: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, approvalSearchCriteria: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, start_date: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, end_date: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="653" class="link-to-prism">src/providers/cme-processes/cme-processes.ts:653</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>collectionObj</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>searchCriteria</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>approvalSearchCriteria</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>start_date</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>end_date</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="importFirebasefromGoogleSheets"></a>
+                        <span class="name">
+                            <b>
+                            importFirebasefromGoogleSheets
+                            </b>
+                            <a href="#importFirebasefromGoogleSheets"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>importFirebasefromGoogleSheets()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="233" class="link-to-prism">src/providers/cme-processes/cme-processes.ts:233</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loginFB"></a>
+                        <span class="name">
+                            <b>
+                            loginFB
+                            </b>
+                            <a href="#loginFB"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>loginFB()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/providers/cme-processes/cme-processes.ts:46</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="registerFB"></a>
+                        <span class="name">
+                            <b>
+                            registerFB
+                            </b>
+                            <a href="#registerFB"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>registerFB()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">src/providers/cme-processes/cme-processes.ts:110</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="runBackUpBatches"></a>
+                        <span class="name">
+                            <b>
+                            runBackUpBatches
+                            </b>
+                            <a href="#runBackUpBatches"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>runBackUpBatches(collectionObj: )</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="635" class="link-to-prism">src/providers/cme-processes/cme-processes.ts:635</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>collectionObj</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="saveTextAsFile"></a>
+                        <span class="name">
+                            <b>
+                            saveTextAsFile
+                            </b>
+                            <a href="#saveTextAsFile"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>saveTextAsFile(data: , filename: )</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="791" class="link-to-prism">src/providers/cme-processes/cme-processes.ts:791</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>data</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>filename</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="updateFirebasefromGoogleSheets"></a>
+                        <span class="name">
+                            <b>
+                            updateFirebasefromGoogleSheets
+                            </b>
+                            <a href="#updateFirebasefromGoogleSheets"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>updateFirebasefromGoogleSheets()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="413" class="link-to-prism">src/providers/cme-processes/cme-processes.ts:413</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_COLL"></a>
+                        <span class="name">
+                            <b>
+                            _COLL
+                            </b>
+                            <a href="#_COLL"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_COLL:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>clientVars.cycleCollection1</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/providers/cme-processes/cme-processes.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_CONTENT"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _CONTENT
+                            </b>
+                            <a href="#_CONTENT"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_CONTENT:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/providers/cme-processes/cme-processes.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_DB"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _DB
+                            </b>
+                            <a href="#_DB"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_DB:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/providers/cme-processes/cme-processes.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cmeRecords"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            cmeRecords
+                            </b>
+                            <a href="#cmeRecords"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>cmeRecords:     <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/providers/cme-processes/cme-processes.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="confProv"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            confProv
+                            </b>
+                            <a href="#confProv"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>confProv:     <code><a href="../injectables/ConfDaysProcessesProvider.html" target="_self" >ConfDaysProcessesProvider</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../injectables/ConfDaysProcessesProvider.html" target="_self" >ConfDaysProcessesProvider</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/providers/cme-processes/cme-processes.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="courses"></a>
+                        <span class="name">
+                            <b>
+                            courses
+                            </b>
+                            <a href="#courses"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>courses:     <code>[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/providers/cme-processes/cme-processes.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="datepipe"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            datepipe
+                            </b>
+                            <a href="#datepipe"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>datepipe:     <code><a href="https://angular.io/api/common/DatePipe" target="_blank" >DatePipe</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/common/DatePipe" target="_blank" >DatePipe</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/providers/cme-processes/cme-processes.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="http"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            http
+                            </b>
+                            <a href="#http"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>http:     <code><a href="https://angular.io/api/http/Http" target="_blank" >Http</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/http/Http" target="_blank" >Http</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/providers/cme-processes/cme-processes.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="srk"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            srk
+                            </b>
+                            <a href="#srk"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>srk:     <code><a href="../injectables/SrkServicesProvider.html" target="_self" >SrkServicesProvider</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../injectables/SrkServicesProvider.html" target="_self" >SrkServicesProvider</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/providers/cme-processes/cme-processes.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { DatePipe } from &#x27;@angular/common&#x27;;
+import { AlertController } from &#x27;ionic-angular&#x27;;
+import { Injectable } from &#x27;@angular/core&#x27;;
+import { DatabaseProvider } from &#x27;../database/database&#x27;;
+import { Http } from &quot;@angular/http&quot;;
+import &quot;rxjs/add/operator/map&quot;;
+import &quot;rxjs/add/operator/toPromise&quot;;
+// We MUST import both the firebase AND firestore modules like so
+import * as firebase from &quot;firebase&quot;;
+import &quot;firebase/firestore&quot;;
+//import { File } from &quot;@ionic-native/file&quot;;
+import { CookieService } from &#x27;ngx-cookie-service&#x27;;
+import { ConfDaysProcessesProvider } from &quot;../conf-days-processes/conf-days-processes&quot;;
+//import { noUndefined } from &#x27;@angular/compiler/src/util&#x27;;
+//import { isUndefined } from &#x27;ionic-angular/util/util&#x27;;
+import { SrkServicesProvider } from &#x27;../srk-services/srk-services&#x27;;
+import { clientVars } from &#x27;./../../environments/environment&#x27;;
+
+@Injectable()
+export class CmeProcessesProvider {
+
+  _COLL &#x3D; clientVars.cycleCollection1;
+  private _DB: any;
+  private cmeRecords: any;
+  private _CONTENT: any;
+
+  courses &#x3D; [];
+
+  constructor(public http: Http, private cookieService: CookieService,
+    private _DBP: DatabaseProvider,
+    public confProv: ConfDaysProcessesProvider,
+    public datepipe: DatePipe, private _ALERT: AlertController,
+    public srk: SrkServicesProvider) {
+    
+    this._DB &#x3D; firebase.firestore();
+
+    const settings &#x3D; { timestampsInSnapshots: true }; //FIREBASE MADE A CHANGE TO READ TIMESTAMPS AS TIMESTAMPS INSTEAD OF AS SYSTEM DATE OBJECTS - THESE TWO LINES FORCE THE READ AS A TIMESTAMP TO PREPARE FOR THAT CHANGE WHEN FIREBASE IMPLEMENTS IT OR ELSE IT WOULD BE A BREAKING CHANGE
+    this._DB.settings(settings);
+
+    this.courses.push({ // instantiate
+      accreditor: &quot;&quot;
+    });
+
+  }
+
+  loginFB() {
+
+    return new Promise((resolve, reject) &#x3D;&gt; {
+      let checkID &#x3D; this.cookieService.get(&#x27;tokenFB_Num&#x27;);
+
+      let temp_password &#x3D; parseInt(this.srk.decryptString(checkID));
+
+      // srk console.log(&#x27;temp_password inside loginFB: &#x27; + temp_password);
+      let temp_password2 &#x3D; parseInt(this.cookieService.get(&#x27;p_id&#x27;));
+      // srk console.log(&#x27;temp_password2 - Profile ID: &#x27; + temp_password2);
+      let temp_password3 &#x3D; temp_password * temp_password2;
+      // srk console.log(&#x27;temp_password3: &#x27; + temp_password3);
+
+      //let temp_password3 &#x3D;     57277 * 1003780062;
+
+      let password &#x3D; temp_password3.toString();
+
+      if (password.length &gt; 10) {
+        password &#x3D; password.substring(0, 9);
+      }
+
+
+      // CAN CHANGE THE AOA NUMBER HERE TO IMITATE A MEMBER
+      // 57277 - Dr. Battistella
+      // Dr. Battistella - profile id - 1003780062
+      // my profile id - 1003682710
+      // generated password: 574935106
+
+      console.log(&#x27;attempting auTOMAted login&#x27;);
+
+      let email &#x3D; temp_password + &quot;@txosteo.org&quot;; //active_member_email;
+
+      // let email &#x3D; this.cookieService.get(&quot;token_email&quot;);
+
+      // console.log(&#x27;final email and password: &#x27; + email + &#x27;/&#x27; + password);
+
+      /*   FROM JORGE JBRAT
+      Refactor Authentication:
+  Since Firebase 5 the function &#x60;createUserWithEmailAndPassword()&#x60; stopped returning a User object, it now returns a UserCredential object that has the user object inside, so if you were doing something like this:
+  this.afAuth.auth.createUserWithEmailAndPassword(email, password).then(user &#x3D;&gt; {
+    console.log(user);
+  });
+  You&#x27;ll need to change it to something like
+  
+  this.afAuth.auth.createUserWithEmailAndPassword(email, password).then(userCredential &#x3D;&gt; {
+    console.log(userCredential.user);
+  }); */
+
+
+  // something else to consider: from 11/12/18
+  // Note from end of emails with Bear: Right. Check out the Federated Identity and Identity Pools for that. It&#x27;s a weird process of validating on your site (or wherever) and then w/ AWS by registering, etc. It cd be overkill for what you&#x27;re doing since the typical point of that is to then give them AWS access to stuff.
+
+      firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(() &#x3D;&gt; {
+          this.cookieService.set(&#x27;fireBase_login&#x27;, &quot;true&quot;, 0.02083333);
+          resolve(true);
+        })
+        .catch((error) &#x3D;&gt; {
+          console.error(&#x27;login error &#x27; + error);
+          reject(error);
+        });
+    });
+  }
+
+  registerFB() {
+
+    return new Promise((resolve, reject) &#x3D;&gt; {
+
+      // let temp_password &#x3D; parseInt(this.cookieService.get(&#x27;tokenFB_Num&#x27;));
+
+      let checkID &#x3D; this.cookieService.get(&#x27;tokenFB_Num&#x27;);
+      let temp_password &#x3D; parseInt(this.srk.decryptString(checkID));
+
+      // SRK *** SRK *** - could pull something else here to make a unique password if we decide to use fake AOA Number
+
+      // console.log(&#x27;temp_password inside register: &#x27; + temp_password);
+
+      let temp_password2 &#x3D; parseInt(this.cookieService.get(&#x27;p_id&#x27;));
+      let temp_password3 &#x3D; temp_password * temp_password2;
+      let password &#x3D; temp_password3.toString();
+
+      // console.log(&#x27;INSIDE OF REGISTER&#x27;);
+
+      if (password.length &gt; 10) {
+        password &#x3D; password.substring(0, 9);
+      }
+
+      // console.log(&#x27;password inside register: &#x27; + password);
+
+      // email address for firebase auth will always be the aoa number with the poma extension and a password based on the id math
+
+      let email &#x3D; temp_password + &quot;@txosteo.org&quot;;
+
+      // Can create new users with their system email as desired - no reason to manufacture the email and the password
+      // also, seems we could switch to this any time - even could remove all users as their records would still be there 
+      // under a directory named for their aoa number
+      // let email &#x3D; this.cookieService.get(&quot;token_email&quot;);
+
+      firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then(() &#x3D;&gt; {
+          this.cookieService.set(&#x27;fireBase_login&#x27;, &quot;true&quot;, 0.02083333);
+          resolve(true);
+        })
+        .catch((error: any) &#x3D;&gt; {
+      // console.error(&#x27;registation error: &#x27; + error);
+          reject(error);
+        });
+
+    });
+
+  }
+
+
+
+  convertAttestationSheets() {
+
+    let sheetId &#x3D; &quot;1LnX9QfVeF0zuSmnaYqZ-IrylW6U0P-xMqO-JW-3CS78&quot;;
+
+    let url &#x3D;
+      &quot;https://spreadsheets.google.com/feeds/list/&quot; +
+      sheetId +
+      &quot;/od6/public/values?alt&#x3D;json&quot;;
+
+    let x &#x3D; 0;
+    this.http
+      .get(url)
+      .map(res &#x3D;&gt; res.json()) // . .json() )
+      .subscribe(data &#x3D;&gt; {
+
+        var dataLengthCheck &#x3D; data.feed.entry;
+        var dataLength &#x3D; dataLengthCheck.length;
+
+        if (dataLength &gt; 0) {
+          this.displayAlert(&#x27;Database Import&#x27;, &#x27;You are converting the attestation records of &#x27; + dataLength + &#x27; members from Google Sheets into your database.&#x27;);
+        }
+
+        while (x &lt; dataLength) {
+          console.log(&#x27;converting records for member &#x27; + x);
+
+          /*                 let ce_date &#x3D; data.feed.entry[x][&quot;gsx$cedate&quot;][&quot;$t&quot;];
+                          //console.log(&#x27;ce date &#x27; + ce_date);
+                          //let date_entered &#x3D; data.feed.entry[x][&quot;gsx$dateentered&quot;][&quot;$t&quot;];
+                          let accreditor &#x3D; data.feed.entry[x][&quot;gsx$accreditor&quot;][&quot;$t&quot;];
+                          //console.log(&#x27;accreditor &#x27; + accreditor);
+                          
+                          let description &#x3D; data.feed.entry[x][&quot;gsx$description&quot;][&quot;$t&quot;];
+            
+                          let credit_type1 &#x3D; data.feed.entry[x][&quot;gsx$credittype1&quot;][&quot;$t&quot;]; */
+
+          let aoa_number &#x3D; data.feed.entry[x][&quot;gsx$aoanumber&quot;][&quot;$t&quot;];
+
+          // RUN CHECK FOR DUPLICATE AOA NUMBER HERE?
+          // CHECK TO SEE IF AOA_NUM IS DUPLICATE BEFORE EXECUTING (IF IN CLINICAL ASSEMBLY COLLECTION, OMIT)
+          //                 console.log(&#x27;aoa number &#x27; + aoa_number);
+
+          let sessioncheck_1 &#x3D; data.feed.entry[x][&quot;gsx$one&quot;][&quot;$t&quot;];
+          if (sessioncheck_1 &#x3D;&#x3D;&#x3D; &#x27;X&#x27;) { this.confProv.updateConferenceConversionSession(aoa_number, 1); }
+          let sessioncheck_2 &#x3D; data.feed.entry[x][&quot;gsx$two&quot;][&quot;$t&quot;];
+          if (sessioncheck_2 &#x3D;&#x3D;&#x3D; &#x27;X&#x27;) { this.confProv.updateConferenceConversionSession(aoa_number, 2); }
+          let sessioncheck_3 &#x3D; data.feed.entry[x][&quot;gsx$three&quot;][&quot;$t&quot;];
+          if (sessioncheck_3 &#x3D;&#x3D;&#x3D; &#x27;X&#x27;) { this.confProv.updateConferenceConversionSession(aoa_number, 3); }
+          let sessioncheck_4 &#x3D; data.feed.entry[x][&quot;gsx$four&quot;][&quot;$t&quot;];
+          if (sessioncheck_4 &#x3D;&#x3D;&#x3D; &#x27;X&#x27;) { this.confProv.updateConferenceConversionSession(aoa_number, 4); }
+          let sessioncheck_5 &#x3D; data.feed.entry[x][&quot;gsx$five&quot;][&quot;$t&quot;];
+          if (sessioncheck_5 &#x3D;&#x3D;&#x3D; &#x27;X&#x27;) { this.confProv.updateConferenceConversionSession(aoa_number, 5); }
+          let sessioncheck_6 &#x3D; data.feed.entry[x][&quot;gsx$six&quot;][&quot;$t&quot;];
+          if (sessioncheck_6 &#x3D;&#x3D;&#x3D; &#x27;X&#x27;) { this.confProv.updateConferenceConversionSession(aoa_number, 6); }
+          let sessioncheck_7 &#x3D; data.feed.entry[x][&quot;gsx$seven&quot;][&quot;$t&quot;];
+          if (sessioncheck_7 &#x3D;&#x3D;&#x3D; &#x27;X&#x27;) { this.confProv.updateConferenceConversionSession(aoa_number, 7); }
+          let sessioncheck_8 &#x3D; data.feed.entry[x][&quot;gsx$eight&quot;][&quot;$t&quot;];
+          if (sessioncheck_8 &#x3D;&#x3D;&#x3D; &#x27;X&#x27;) { this.confProv.updateConferenceConversionSession(aoa_number, 8); }
+          let sessioncheck_9 &#x3D; data.feed.entry[x][&quot;gsx$nine&quot;][&quot;$t&quot;];
+          if (sessioncheck_9 &#x3D;&#x3D;&#x3D; &#x27;X&#x27;) { this.confProv.updateConferenceConversionSession(aoa_number, 9); }
+          let sessioncheck_10 &#x3D; data.feed.entry[x][&quot;gsx$ten&quot;][&quot;$t&quot;];
+          if (sessioncheck_10 &#x3D;&#x3D;&#x3D; &#x27;X&#x27;) { this.confProv.updateConferenceConversionSession(aoa_number, 10); }
+          let sessioncheck_11 &#x3D; data.feed.entry[x][&quot;gsx$eleven&quot;][&quot;$t&quot;];
+          if (sessioncheck_11 &#x3D;&#x3D;&#x3D; &#x27;X&#x27;) { this.confProv.updateConferenceConversionSession(aoa_number, 11); }
+          let sessioncheck_12 &#x3D; data.feed.entry[x][&quot;gsx$twelve&quot;][&quot;$t&quot;];
+          if (sessioncheck_12 &#x3D;&#x3D;&#x3D; &#x27;X&#x27;) { this.confProv.updateConferenceConversionSession(aoa_number, 12); }
+
+          x++;
+        }
+
+      });
+
+  }
+
+  importFirebasefromGoogleSheets() {
+    // NO SPECIAL CREDENTIALS NEEDED FOR THIS - JUST OPEN A SHEET TO THE WORLD AND REPLACE THE ID
+    // let sheetId &#x3D; &quot;1HukIuiUh6RbP40rFUkWxLrXdk66SBbBau2XBsNdmPlw&quot;; // the &quot;dig it&quot; sheet
+    // let sheetId &#x3D; &quot;1YGJJjMfU7-S-JcTk3EDToI2PB3roiSs82ALvE8SCV3I&quot;; // test
+
+    console.log(&#x27;calling correct IMPORT 1_26_2020&#x27;);
+
+    var credit_type2;
+    var hours2;
+    var hours_approved2;
+    var credit_type3;
+    var hours3;
+    var hours_approved3;
+
+    let sheetId &#x3D; &quot;1LnX9QfVeF0zuSmnaYqZ-IrylW6U0P-xMqO-JW-3CS78&quot;; 
+    
+    //https://spreadsheets.google.com/feeds/list/1LnX9QfVeF0zuSmnaYqZ-IrylW6U0P-xMqO-JW-3CS78/od6/public/values?alt&#x3D;json
+
+
+    let url &#x3D;
+      &quot;https://spreadsheets.google.com/feeds/list/&quot; +
+      sheetId +
+      &quot;/od6/public/values?alt&#x3D;json&quot;;
+
+    //https://docs.google.com/spreadsheets/d/e/2PACX-1vR2tK0GbkDDNyHuF8GSwMlJPrRieWVzU3mL3QN6TbfBX7S1iFuaYKMKeWZgzNTxAJjd86GohitZJDD1/pubhtml
+
+    //https://spreadsheets.google.com/feeds/list/1HukIuiUh6RbP40rFUkWxLrXdk66SBbBau2XBsNdmPlw/od6/public/values?alt&#x3D;json
+
+    //          console.log(&#x27;inside insert&#x27;);
+
+    let x &#x3D; 0;
+    this.http
+      .get(url)
+      .map(res &#x3D;&gt; res.json()) // . .json() )
+      .subscribe(data &#x3D;&gt; {
+
+        console.log(&#x27;json data &#x27; + JSON.stringify(data));
+        // console.log(&#x27;length &#x27; + data.feed.length);
+        // console.log(&#x27;rows: &#x27; + data.feed.ROWS);
+
+        var dataLengthCheck &#x3D; data.feed.entry;
+        var dataLength &#x3D; dataLengthCheck.length;
+        console.log(&#x27;length? &#x27; + dataLength);
+
+        if (dataLength &gt; 0) {
+          this.displayAlert(&#x27;Database Import&#x27;, &#x27;You are importing &#x27; + dataLength + &#x27; records from Google Sheets into your database.&#x27;);
+          //              alert(&#x27;You are about to import &#x27; + dataLength + &#x27; records from Google Sheets into your database.&#x27;);
+
+        }
+
+        while (x &lt; dataLength) {
+          //x &#x3D; 1; // COMMENT THIS OUT TO PREVENT FROM RUNNING
+
+          //    console.log(x);
+
+          console.log(&#x27;starting&#x27;);
+
+          let ce_date &#x3D; data.feed.entry[x][&quot;gsx$cedate&quot;][&quot;$t&quot;];
+                          console.log(&#x27;ce date &#x27; + ce_date);
+          //let date_entered &#x3D; data.feed.entry[x][&quot;gsx$dateentered&quot;][&quot;$t&quot;];
+          let accreditor &#x3D; data.feed.entry[x][&quot;gsx$accreditor&quot;][&quot;$t&quot;];
+          //                console.log(&#x27;accreditor &#x27; + accreditor);
+
+          let session &#x3D; parseInt(data.feed.entry[x][&quot;gsx$session&quot;][&quot;$t&quot;]);
+
+          let other &#x3D; data.feed.entry[x][&quot;gsx$other&quot;][&quot;$t&quot;];
+          console.log(&#x27;other &#x27; + other);
+
+          //              console.log(&#x27;session &#x27; + session);                                
+
+          let description &#x3D; data.feed.entry[x][&quot;gsx$description&quot;][&quot;$t&quot;];
+          //                console.log(&#x27;description &#x27; + description);                
+
+
+          let credit_type1 &#x3D; data.feed.entry[x][&quot;gsx$credittype1&quot;][&quot;$t&quot;];
+          let hours1 &#x3D; data.feed.entry[x][&quot;gsx$hours1&quot;][&quot;$t&quot;];
+          let hours_approved1 &#x3D; data.feed.entry[x][&quot;gsx$hoursapproved1&quot;][&quot;$t&quot;];
+
+          let tempTestExists2 &#x3D; data.feed.entry[x][&quot;gsx$credittype2&quot;][&quot;$t&quot;];
+          if ((tempTestExists2 !&#x3D;&#x3D; undefined) &amp;&amp; (tempTestExists2 !&#x3D;&#x3D; &#x27;undefined&#x27;)) {
+
+            credit_type2 &#x3D; data.feed.entry[x][&quot;gsx$credittype2&quot;][&quot;$t&quot;];
+            hours2 &#x3D; data.feed.entry[x][&quot;gsx$hours2&quot;][&quot;$t&quot;];
+            hours_approved2 &#x3D; data.feed.entry[x][&quot;gsx$hoursapproved2&quot;][&quot;$t&quot;];
+
+          }
+          else {
+            credit_type2 &#x3D; &quot;&quot;; hours2 &#x3D; &quot;&quot;; hours_approved2 &#x3D; &quot;&quot;;
+          }
+
+
+          let tempTestExists3 &#x3D; data.feed.entry[x][&quot;gsx$credittype3&quot;][&quot;$t&quot;];
+          if ((tempTestExists3 !&#x3D;&#x3D; undefined) &amp;&amp; (tempTestExists3 !&#x3D;&#x3D; &#x27;undefined&#x27;)) {
+
+            credit_type3 &#x3D; data.feed.entry[x][&quot;gsx$credittype3&quot;][&quot;$t&quot;];
+            hours3 &#x3D; data.feed.entry[x][&quot;gsx$hours3&quot;][&quot;$t&quot;];
+            hours_approved3 &#x3D; data.feed.entry[x][&quot;gsx$hoursapproved3&quot;][&quot;$t&quot;];
+
+          }
+          else {
+            credit_type3 &#x3D; &quot;&quot;; hours3 &#x3D; &quot;&quot;; hours_approved3 &#x3D; &quot;&quot;;
+          }
+
+          let aoa_number &#x3D; data.feed.entry[x][&quot;gsx$aoanumber&quot;][&quot;$t&quot;];
+          let approval &#x3D; data.feed.entry[x][&quot;gsx$approval&quot;][&quot;$t&quot;];
+
+          approval &#x3D; approval.charAt(0).toUpperCase() + approval.slice(1).toLowerCase();
+
+          let approval_reason &#x3D; data.feed.entry[x][&quot;gsx$denialreason&quot;][&quot;$t&quot;];
+
+          let conference &#x3D; data.feed.entry[x][&quot;gsx$conference&quot;][&quot;$t&quot;];
+
+          //let createdByProcess &#x3D; data.feed.entry[x][&quot;gsx$createprocess&quot;][&quot;$t&quot;];
+          //console.log(&#x27;approval_reason &#x27; + approval_reason);
+
+
+          console.log(&#x27;aoa number: &#x27; + aoa_number)
+
+          x++;
+
+          //  }
+
+          //let createdByUser &#x3D; this.cookieService.get(&#x27;tokenFB_Num&#x27;); // CHANGE THIS TO USE THE COOKIE WHEN INTEGRATED WITH LARGER PROJECT
+          //let createdByProcess &#x3D; &quot;user&quot;; // WHEN IMPORTED FROM GOOGLE SHEET, THIS WILL BE SET AS &#x27;system&#x27;
+
+          let checkID &#x3D; this.cookieService.get(&#x27;tokenFB_Num&#x27;);
+          let createdByUser &#x3D; this.srk.decryptString(checkID);
+
+          let date_created &#x3D; new Date();
+          let localtestCreate &#x3D; date_created.toLocaleString(); // toLocaleString gets us a local date when we&#x27;re using a machine-created date
+          let date_created_local &#x3D; new Date(localtestCreate.replace(/-/g, &#x27;\/&#x27;));
+
+          //  alert(&#x27;date created with slashe: &#x27; + testDate);
+
+          let temp_ce_date &#x3D; ce_date.toLocaleString();
+          let ce_date_localtime &#x3D; new Date(temp_ce_date.replace(/-/g, &#x27;\/&#x27;));
+
+
+          /*    let dtCreated &#x3D; new Date();
+             let date_entered &#x3D; new Date();
+        */
+          // CREATES RECORD WITH RANDOM, UNIQUE _DOC ID
+          this._CONTENT &#x3D; {
+            ce_date: ce_date_localtime,
+            date_entered: date_created_local, // when creating this as a mass import, set date entered to system date
+            accreditor: accreditor,
+            session: session,
+            other: other,
+            description: description,
+            credit_type1: credit_type1,
+            hours1: hours1,
+            hours_approved1: hours_approved1,
+            credit_type2: credit_type2,
+            hours2: hours2,
+            hours_approved2: hours_approved2,
+            credit_type3: credit_type3,
+            hours3: hours3,
+            hours_approved3: hours_approved3,
+            //delivery_method: delivery_method,
+            supporting_doc: &quot;&quot;,
+            aoa_number: aoa_number,
+            approval: approval,
+            approval_reason: approval_reason,
+            conference: conference, //&quot;Clinical Assembly 2018&quot; // NEEDS TO BE AVAILABLE FOR BOTH SETS OF IMPORTS - ALL THREE... 
+            created_by: createdByUser,
+            created_by_process: &#x27;system&#x27;,
+            date_created: date_created_local,
+
+          };
+
+          this._DB
+          .collection(this._COLL)
+  //        .collection(&#x27;TEST&#x27;)
+            .add(this._CONTENT);
+
+        }
+
+      });
+  }
+
+  updateFirebasefromGoogleSheets() {
+
+    console.log(&#x27;update from sheets&#x27;);
+
+    var credit_type2;
+    var hours2;
+    var hours_approved2;
+    var credit_type3;
+    var hours3;
+    var hours_approved3;
+
+    let sheetId &#x3D; &quot;1LnX9QfVeF0zuSmnaYqZ-IrylW6U0P-xMqO-JW-3CS78&quot;;
+
+    let url &#x3D;
+      &quot;https://spreadsheets.google.com/feeds/list/&quot; +
+      sheetId +
+      &quot;/od6/public/values?alt&#x3D;json&quot;;
+
+    let x &#x3D; 0;
+    this.http
+      .get(url)
+      .map(res &#x3D;&gt; res.json()) // . .json() )
+      .subscribe(data &#x3D;&gt; {
+
+
+        var dataLengthCheck &#x3D; data.feed.entry;
+        var dataLength &#x3D; dataLengthCheck.length;
+        console.log(&#x27;length? &#x27; + dataLength);
+
+        let testForUpdateID &#x3D; data.feed.entry[x][&quot;gsx$recordid&quot;][&quot;$t&quot;];
+
+        console.log(&#x27;testForUpdateID &#x27; + testForUpdateID);
+
+        if (testForUpdateID.length &#x3D;&#x3D;&#x3D; 0) {
+          alert(&#x27;WARNING: RECORD IDs are required. You are attempting an update so each record needs the unique id from the database.&#x27;);
+          return;
+        }
+
+        if (testForUpdateID &#x3D;&#x3D;&#x3D; undefined) {
+          console.log(&#x27;undefined&#x27;);
+        }
+
+        if (dataLength &gt; 0) {
+          this.displayAlert(&#x27;Database Import&#x27;, &#x27;You are updating &#x27; + dataLength + &#x27; records into your database using Google Sheets data.&#x27;);
+          //              alert(&#x27;You are about to import &#x27; + dataLength + &#x27; records from Google Sheets into your database.&#x27;);
+        }
+
+        while (x &lt; dataLength) {
+          //x &#x3D; 1; // COMMENT THIS OUT TO PREVENT FROM RUNNING
+
+          //    console.log(x);
+
+          console.log(&#x27;starting&#x27;);
+
+          let ce_date &#x3D; data.feed.entry[x][&quot;gsx$cedate&quot;][&quot;$t&quot;];
+          //                console.log(&#x27;ce date &#x27; + ce_date);
+          //let date_entered &#x3D; data.feed.entry[x][&quot;gsx$dateentered&quot;][&quot;$t&quot;];
+          let accreditor &#x3D; data.feed.entry[x][&quot;gsx$accreditor&quot;][&quot;$t&quot;];
+          //                console.log(&#x27;accreditor &#x27; + accreditor);
+
+          let session &#x3D; parseInt(data.feed.entry[x][&quot;gsx$session&quot;][&quot;$t&quot;]);
+
+          let other &#x3D; data.feed.entry[x][&quot;gsx$other&quot;][&quot;$t&quot;];
+          //              console.log(&#x27;session &#x27; + session);                                
+
+          let description &#x3D; data.feed.entry[x][&quot;gsx$description&quot;][&quot;$t&quot;];
+          //                console.log(&#x27;description &#x27; + description);                
+
+          
+
+          let credit_type1 &#x3D; data.feed.entry[x][&quot;gsx$credittype1&quot;][&quot;$t&quot;];
+          let hours1 &#x3D; data.feed.entry[x][&quot;gsx$hours1&quot;][&quot;$t&quot;];
+          let hours_approved1 &#x3D; data.feed.entry[x][&quot;gsx$hoursapproved1&quot;][&quot;$t&quot;];
+
+          let tempTestExists2 &#x3D; data.feed.entry[x][&quot;gsx$credittype2&quot;][&quot;$t&quot;];
+          if ((tempTestExists2 !&#x3D;&#x3D; undefined) &amp;&amp; (tempTestExists2 !&#x3D;&#x3D; &#x27;undefined&#x27;)) {
+
+            credit_type2 &#x3D; data.feed.entry[x][&quot;gsx$credittype2&quot;][&quot;$t&quot;];
+            hours2 &#x3D; data.feed.entry[x][&quot;gsx$hours2&quot;][&quot;$t&quot;];
+            hours_approved2 &#x3D; data.feed.entry[x][&quot;gsx$hoursapproved2&quot;][&quot;$t&quot;];
+
+          }
+          else {
+            credit_type2 &#x3D; &quot;&quot;; hours2 &#x3D; &quot;&quot;; hours_approved2 &#x3D; &quot;&quot;;
+          }
+
+
+          let tempTestExists3 &#x3D; data.feed.entry[x][&quot;gsx$credittype2&quot;][&quot;$t&quot;];
+          if ((tempTestExists3 !&#x3D;&#x3D; undefined) &amp;&amp; (tempTestExists3 !&#x3D;&#x3D; &#x27;undefined&#x27;)) {
+
+            credit_type3 &#x3D; data.feed.entry[x][&quot;gsx$credittype3&quot;][&quot;$t&quot;];
+            hours3 &#x3D; data.feed.entry[x][&quot;gsx$hours3&quot;][&quot;$t&quot;];
+            hours_approved3 &#x3D; data.feed.entry[x][&quot;gsx$hoursapproved3&quot;][&quot;$t&quot;];
+
+          }
+          else {
+            credit_type3 &#x3D; &quot;&quot;; hours3 &#x3D; &quot;&quot;; hours_approved3 &#x3D; &quot;&quot;;
+          }
+
+          let aoa_number &#x3D; data.feed.entry[x][&quot;gsx$aoanumber&quot;][&quot;$t&quot;];
+          let approval &#x3D; data.feed.entry[x][&quot;gsx$approval&quot;][&quot;$t&quot;];
+
+          approval &#x3D; approval.charAt(0).toUpperCase() + approval.slice(1).toLowerCase();
+
+          let approval_reason &#x3D; data.feed.entry[x][&quot;gsx$denialreason&quot;][&quot;$t&quot;];
+
+          //let createdByProcess &#x3D; data.feed.entry[x][&quot;gsx$createprocess&quot;][&quot;$t&quot;];
+          //console.log(&#x27;approval_reason &#x27; + approval_reason);
+
+          let conference &#x3D; data.feed.entry[x][&quot;gsx$conference&quot;][&quot;$t&quot;];
+          let record_id &#x3D; data.feed.entry[x][&quot;gsx$recordid&quot;][&quot;$t&quot;];
+
+          let supporting_doc &#x3D; data.feed.entry[x][&quot;gsx$supportingdocuments&quot;][&quot;$t&quot;]; // if updating supporting_doc, google sheet format should be: &quot;https://firebasestorage.googleapis.com/v0/b/poma-cme-57533.appspot.com/o/177881%2FBLS%202018-2020.pdf?alt&#x3D;media&amp;token&#x3D;9febd5cc-477a-4368-b65b-a4c3f47909bc&quot;|
+
+          x++;
+
+          //  }
+
+          //let createdByUser &#x3D; this.cookieService.get(&#x27;tokenFB_Num&#x27;); // CHANGE THIS TO USE THE COOKIE WHEN INTEGRATED WITH LARGER PROJECT
+          //let createdByProcess &#x3D; &quot;user&quot;; // WHEN IMPORTED FROM GOOGLE SHEET, THIS WILL BE SET AS &#x27;system&#x27;
+
+          let checkID &#x3D; this.cookieService.get(&#x27;tokenFB_Num&#x27;);
+          let createdByUser &#x3D; this.srk.decryptString(checkID);
+
+          let date_created &#x3D; new Date();
+          let localtestCreate &#x3D; date_created.toLocaleString(); // toLocaleString gets us a local date when we&#x27;re using a machine-created date
+          let date_created_local &#x3D; new Date(localtestCreate.replace(/-/g, &#x27;\/&#x27;));
+
+          //  alert(&#x27;date created with slashe: &#x27; + testDate);
+
+          let temp_ce_date &#x3D; ce_date.toLocaleString();
+          let ce_date_localtime &#x3D; new Date(temp_ce_date.replace(/-/g, &#x27;\/&#x27;));
+
+          /* this._DB
+          .updateDocument(this._COLL, record_id, {
+            ce_date: ce_date_localtime,
+            //date_entered: new Date(this.date_entered),
+            accreditor: accreditor,
+            credit_type1: credit_type1,
+            hours1: hours1,
+            hours_approved1: hours_approved1,
+            credit_type2: this.credit_type2,
+            hours2: hours2,
+            hours_approved2: hours_approved2,
+            credit_type3: this.credit_type3,
+            hours3: hours3,
+            hours_approved3: hours_approved3,
+            description: description,
+            supporting_doc: supporting_doc,
+            aoa_number: this.aoa_number,
+            approval: approval,
+            approval_reason: approval_reason,
+            created_by: this.created_by,
+            created_by_process: this.created_by_process,
+            date_created: date_created_local
+    }) */
+          /*      updateDocument(collectionObj : string,
+                 docID         : string,
+                 dataObj       : any) : Promise&lt;any&gt;
+         {
+         return new Promise((resolve, reject) &#x3D;&gt;
+         {
+          this._DB
+          .collection(collectionObj)
+          .doc(docID)
+          .update(dataObj)
+          .then((obj : any) &#x3D;&gt;
+          {
+             resolve(obj);
+          })
+          .catch((error : any) &#x3D;&gt;
+          {
+             reject(error);
+          });
+         });
+         } */
+
+          //}
+
+          // CREATES RECORD WITH RANDOM, UNIQUE _DOC ID
+          this._DBP
+            .updateDocument(this._COLL, record_id, {
+              ce_date: ce_date_localtime,
+              date_entered: date_created_local, // when creating this as a mass import, set date entered to system date
+              accreditor: accreditor,
+              session: session,
+              other: other,
+              description: description,
+              credit_type1: credit_type1,
+              hours1: hours1,
+              hours_approved1: hours_approved1,
+              credit_type2: credit_type2,
+              hours2: hours2,
+              hours_approved2: hours_approved2,
+              credit_type3: credit_type3,
+              hours3: hours3,
+              hours_approved3: hours_approved3,
+              //delivery_method: delivery_method,
+              supporting_doc: supporting_doc,
+              aoa_number: aoa_number,
+              approval: approval,
+              approval_reason: approval_reason,
+              created_by: createdByUser,
+              created_by_process: &#x27;system&#x27;,
+              date_created: date_created_local,
+              conference: conference // NEEDS TO BE AVAILABLE FOR BOTH SETS OF IMPORTS - ALL THREE... 
+            });
+
+          /*  this._DB
+           .collection(&#x27;POMA CME Records&#x27;) //.collection(this._COLL)
+           .add(this._CONTENT); */
+
+        }
+
+      });
+  }
+
+  /*   update :-)
+
+    this._DB
+    .updateDocument(this._COLL, this.docID, { */
+
+  runBackUpBatches(collectionObj)
+  {
+
+    var totalRecords &#x3D; this._DBP.getDocsLength(collectionObj)
+    .then(data &#x3D;&gt;{
+      console.log(&#x27;data: &#x27; + JSON.stringify(data))
+    })
+
+    this._DBP.runBackUpBatches(collectionObj)
+    
+      // srk 2019
+      // DIVIDE TOTAL RECORDS BY 1000 AND WHILE THROUGH THEM ALL
+      // FROM HERE - CAN I CALL runBackUpBatches FOR EVERY 1000 RECORDS
+      // THEN WRITE OUT EVERY 1000 RECORDS
+      // SENDING BACK IN EACH TIME A NEW lastVisible FOR THE STARTAT
+
+  }
+
+  exportDBtoFile(collectionObj: string, searchCriteria: string, approvalSearchCriteria: string, start_date: string, end_date: string) {
+
+    //      alert(&#x27;inside exportDBtoFile - searchCriteria&#x27; + searchCriteria);
+
+    //      if (searchCriteria )
+    //let searchString &#x3D; &quot;adminUser&quot;;
+
+    let approvalSearchString &#x3D; approvalSearchCriteria;
+
+
+    this._DBP.getDocuments(collectionObj, searchCriteria, approvalSearchString, start_date, end_date)
+      .then(data &#x3D;&gt; {
+        if (data.length &#x3D;&#x3D;&#x3D; 0) {
+          alert(&quot;There are no records available for export with these search criteria:\n AOA Number: &quot; + searchCriteria + &quot;\n Admin Approval: &quot; + approvalSearchString + &quot;\n Start Date: &quot; + start_date + &quot;\n End Date: &quot; + end_date);
+          //this.displayAlert(&#x27;Database Export&#x27;, &#x27;There are no records available for export with the specified criteria&#x27;);
+        } else {
+          this.displayAlert(&#x27;Database Export&#x27;, &#x27;You are exporting &#x27; + data.length + &#x27; CME records to file: cmeExports.csv&#x27;);
+
+          this.cmeRecords &#x3D; data; // THIS JUST LOADS UP THE RECORDSET SO THE HTML CAN WRITE THEM OUT
+          var fileText: string &#x3D; &quot;&quot;;
+          var fileName &#x3D; &quot;cmeExports.csv&quot;;
+          let fullFile: any &#x3D; [];
+
+          // CREATE Excel COLUMN HEADERS  
+          fileText &#x3D;
+            &quot;CE Date&quot; + &#x27;, &#x27; +
+            /*             &quot;Date Entered&quot; + &#x27;, &#x27; + */
+            &quot;Accreditor&quot; + &#x27;, &#x27; +
+            &quot;Session&quot; + &#x27;, &#x27; +
+            &quot;Other&quot; + &#x27;, &#x27; + 
+            &quot;Description&quot; + &#x27;, &#x27; + 
+            &quot;Credit Type 1&quot; + &#x27;, &#x27; +
+            &quot;Hours 1&quot; + &#x27;, &#x27; +
+            &quot;Hours Approved 1&quot; + &#x27;, &#x27; +
+            &quot;Credit Type 2&quot; + &#x27;, &#x27; +
+            &quot;Hours 2&quot; + &#x27;, &#x27; +
+            &quot;Hours Approved 2&quot; + &#x27;, &#x27; +
+            &quot;Credit Type 3&quot; + &#x27;, &#x27; +
+            &quot;Hours 3&quot; + &#x27;, &#x27; +
+            &quot;Hours Approved 3&quot; + &#x27;, &#x27; +
+            &quot;AOA Number&quot; + &#x27;, &#x27; +
+            &quot;Approval&quot; + &#x27;, &#x27; +
+            &quot;Denial Reason&quot; + &#x27;, &#x27; +
+            &quot;conference&quot; + &#x27;, &#x27; +
+            &quot;record id&quot; + &#x27;, &#x27; +
+            &quot;Supporting Documents&quot; + &#x27;, &#x27; +
+            &quot;Created / Updated By&quot; + &#x27;, &#x27; +
+            &quot;Create Method&quot; + &#x27;, &#x27; +
+            &quot;Last Updated&quot; + &#x27;, &#x27; +
+
+            &#x27;\n&#x27;;
+
+          this.cmeRecords.forEach(element &#x3D;&gt; {
+            // CREATE AN ARRAY AND LOOP THROUGH EACH RECORD AS WE PRINT OR JUST CONTATENATE STRINGS AND PRINT EACH AS WE GO?
+            //  let res &#x3D; JSON.stringify(data);
+            //  console.log(&#x27;full dump: &#x27; + res);
+            //  console.log(&quot;try created_by_process: &quot; + element.created_by_process); // data().hours);
+
+            let formatted_ce_date &#x3D; this.datepipe.transform(element.ce_date, &#x27;yyyy-MM-dd&#x27;);
+            //  let formatted_date_entered &#x3D; this.datepipe.transform(element.date_entered, &#x27;yyyy-MM-dd&#x27;);
+            let formatted_date_created &#x3D; this.datepipe.transform(element.date_created, &#x27;yyyy-MM-dd&#x27;);
+
+
+            // ADD A LIBRARY SERVICE TO CLEAN OUT TEXT?
+            let cleanDescription &#x3D; element.description.replace(/,/g, &#x27;\,&#x27;);
+
+            // should do this and test it for apostrophes, too - srk 6/8/2018
+
+            //itemDesc &#x3D; itemDesc.replace(/,/g, &#x27;\,&#x27;);
+
+            //console.log(&#x27;clean? &#x27;, cleanDescription);
+
+
+            let cleanCreditType1 &#x3D; element.credit_type1.replace(/\s+/g,&#x27;&#x27;);
+            cleanCreditType1 &#x3D; cleanCreditType1.replace(/,/g, &#x27;\, &#x27;);
+            // element.credit_type1 + &#x27;,&#x27; +
+
+            fileText &#x3D; fileText +
+              formatted_ce_date + &#x27;,&#x27; +
+              element.accreditor + &#x27;,&#x27; +
+              element.session + &#x27;,&#x27; +
+              element.other + &#x27;,&#x27; +
+              &#x27;&quot;&#x27; + cleanDescription + &#x27;&quot;&#x27; + &#x27;,&#x27; +
+              &#x27;&quot;&#x27; + cleanCreditType1 + &#x27;&quot;&#x27; + &#x27;,&#x27; +
+              element.hours1 + &#x27;,&#x27; +
+              element.hours_approved1 + &#x27;,&#x27; +
+              element.credit_type2 + &#x27;,&#x27; +
+              element.hours2 + &#x27;,&#x27; +
+              element.hours_approved2 + &#x27;,&#x27; +
+              element.credit_type3 + &#x27;,&#x27; +
+              element.hours3 + &#x27;,&#x27; +
+              element.hours_approved3 + &#x27;,&#x27; +
+              element.aoa_number + &#x27;,&#x27; +
+              element.approval + &#x27;,&#x27; +
+              element.approval_reason + &#x27;,&#x27; +
+              element.conference + &#x27;,&#x27; +
+              element.id + &#x27;,&#x27; +
+              element.supporting_doc + &#x27;,&#x27; +
+              element.created_by + &#x27;,&#x27; +
+              element.created_by_process + &#x27;,&#x27; +
+              formatted_date_created +
+              &#x27;\n&#x27;;
+
+            fullFile.push({
+              fileText
+            });
+
+          });
+
+          this.saveTextAsFile(fileText, fileName);
+        }
+
+      })
+      .catch();
+    /* .catch(error &#x3D;&gt; {
+      this.displayAlert(&quot;File Export Failed&quot;, error.message);
+    }); */
+
+  }
+
+  displayAlert(title: string,
+    message: string): void {
+    let alert: any &#x3D; this._ALERT.create({
+      title: title,
+      subTitle: message,
+      buttons: [{
+        text: &#x27;Got It!&#x27;
+        /* ,
+        handler   : () &#x3D;&gt;
+        {
+        this.retrieveCollection();
+        } */
+      }]
+    });
+
+    alert.present();
+  }
+
+  saveTextAsFile(data, filename) {
+    if (!data) {
+      console.error(&quot;Console.save: No data&quot;);
+      return;
+    }
+
+    if (!filename) filename &#x3D; &quot;console.json&quot;;
+    var blob &#x3D; new Blob([data], { type: &quot;text/plain&quot; }),
+      e &#x3D; document.createEvent(&quot;MouseEvents&quot;),
+      a &#x3D; document.createElement(&quot;a&quot;);
+    a.download &#x3D; filename;
+    a.href &#x3D; window.URL.createObjectURL(blob);
+    a.dataset.downloadurl &#x3D; [&quot;text/plain&quot;, a.download, a.href].join(&quot;:&quot;);
+    e.initEvent(&quot;click&quot;, true, false);
+    a.dispatchEvent(e);
+  }
+
+
+  buildOneConferenceDay(conferenceDay, ce_date, aoa_number, credit_type1, hours1, description, session) {
+
+
+  }
+
+
+convertPOFPSattestationSheets() {
+
+  //let defaultCreditType &#x3D; &quot;1A&quot;;
+  //let exCeptionCreditType &#x3D; &quot;1A&quot;;
+
+  let sheetId &#x3D; &quot;1LnX9QfVeF0zuSmnaYqZ-IrylW6U0P-xMqO-JW-3CS78&quot;;
+  let url &#x3D;
+    &quot;https://spreadsheets.google.com/feeds/list/&quot; +
+    sheetId +
+    &quot;/od6/public/values?alt&#x3D;json&quot;;
+
+  let x &#x3D; 0;
+  /*  8/3 - day 1 - 5 sessions 1 - 5
+      8/4 - day 2 - 8 sessions - 6 - 13
+      8/5 - day 3 - 5 sessions 14 - 18  */
+
+//  var firstDate &#x3D; new Date(&quot;2018-08-03T00:00:00&quot;.replace(/-/g, &#x27;\/&#x27;).replace(/T.+/, &#x27;&#x27;));
+//  var secondDate &#x3D; new Date(&quot;2018-08-04T00:00:00&quot;.replace(/-/g, &#x27;\/&#x27;).replace(/T.+/, &#x27;&#x27;));
+  var thirdDate &#x3D; new Date(&quot;2018-08-05T00:00:00&quot;.replace(/-/g, &#x27;\/&#x27;).replace(/T.+/, &#x27;&#x27;));
+
+  this.http
+    .get(url)
+    .map(res &#x3D;&gt; res.json()) // . .json() ) // DOES THIS NEED TO BE AN OBSERVABLE OR CAN IT JUST BE A PROMISE? (THEN INSTEAD OF SUBSCRIBE)
+    .subscribe(data &#x3D;&gt; {
+
+      var dataLengthCheck &#x3D; data.feed.entry;
+      var dataLength &#x3D; dataLengthCheck.length;
+
+      if (dataLength &gt; 0) {
+        this.displayAlert(&#x27;Database Import&#x27;, &#x27;You are converting the attestation records of &#x27; + dataLength + &#x27; members from Google Sheets into your database.&#x27;);
+      }
+
+      while (x &lt; dataLength) {
+        var totals_1A &#x3D; 0;
+        var totals_OP_1A &#x3D; 0;
+        var totals__CA_1A &#x3D; 0;
+        var totals_PS_1A &#x3D; 0;
+
+        console.log(&#x27;converting records for member &#x27; + x);
+        let aoa_number &#x3D; data.feed.entry[x][&quot;gsx$aoanumber&quot;][&quot;$t&quot;];
+
+        // DAY ONE
+        if (data.feed.entry[x][&quot;gsx$one&quot;][&quot;$t&quot;]) totals_1A++;
+        //this.confProv.createRecordsForPOFPSsession(1, firstDate, aoa_number, defaultCreditType, 1.00, &quot;The Care of the Medically Complex Child and Their Transition to Adult Medical Care&quot;, 1);
+        if (data.feed.entry[x][&quot;gsx$two&quot;][&quot;$t&quot;]) totals_1A++; 
+        //this.confProv.createRecordsForPOFPSsession(1, firstDate, aoa_number, defaultCreditType, 1.00, &quot;Adolescent Sports Injuries&quot;, 1);
+        if (data.feed.entry[x][&quot;gsx$three&quot;][&quot;$t&quot;]) totals_1A++; 
+        //this.confProv.createRecordsForPOFPSsession(1, firstDate, aoa_number, defaultCreditType, 1.00, &quot;Urgent Care in the Family Practice Setting&quot;, 1);
+        if (data.feed.entry[x][&quot;gsx$four&quot;][&quot;$t&quot;]) totals_PS_1A++;
+        //this.confProv.createRecordsForPOFPSsession(1, firstDate, aoa_number, &quot;PS_1A&quot;, 1.00, &quot;Disrupting Health Care with Blockchain&quot;, 1);
+        if (data.feed.entry[x][&quot;gsx$five&quot;][&quot;$t&quot;]) 
+        {
+          if (data.feed.entry[x][&quot;gsx$five&quot;][&quot;$t&quot;] &#x3D;&#x3D;&#x3D; &#x27;x&#x27; || data.feed.entry[x][&quot;gsx$five&quot;][&quot;$t&quot;] &#x3D;&#x3D;&#x3D; &#x27;X&#x27;)
+          { 
+            totals_OP_1A++;
+            totals_OP_1A++;
+          } else {
+            totals_1A++;
+            totals_1A++;
+          }
+
+       //this.confProv.createRecordsForPOFPSsession(1, firstDate, aoa_number, exCeptionCreditType, 2.00, &quot;Pain Management and Opioids: Balancing Risks and Benefits&quot;, 1);
+        }
+
+        // DAY TWO
+        // exCeptionCreditType &#x3D; &quot;1A&quot;; // RESET IN CASE CHANGED ABOVE
+        if (data.feed.entry[x][&quot;gsx$six&quot;][&quot;$t&quot;]) 
+        {
+          if (data.feed.entry[x][&quot;gsx$six&quot;][&quot;$t&quot;] &#x3D;&#x3D;&#x3D; &#x27;x&#x27; || data.feed.entry[x][&quot;gsx$six&quot;][&quot;$t&quot;] &#x3D;&#x3D;&#x3D; &#x27;X&#x27;)
+          { 
+            totals__CA_1A++;
+            totals__CA_1A++;
+          } else {
+            totals_1A++;
+            totals_1A++;
+          }
+          //this.confProv.createRecordsForPOFPSsession(2, secondDate, aoa_number, exCeptionCreditType, 2.00, &quot;Recognizing and Reporting Child Abuse in Pennsylvania&quot;, 1);
+        }
+        //exCeptionCreditType &#x3D; &quot;1A&quot;; // RESET IN CASE CHANGED ABOVE
+
+        if (data.feed.entry[x][&quot;gsx$seven&quot;][&quot;$t&quot;]) totals_PS_1A++;
+        //this.confProv.createRecordsForPOFPSsession(2, secondDate, aoa_number, &quot;PS_1A&quot;, 1.00, &quot;Quality Improvement Whys and Hows&quot;, 1);
+        if (data.feed.entry[x][&quot;gsx$eight&quot;][&quot;$t&quot;]) totals_1A++;
+        //this.confProv.createRecordsForPOFPSsession(2, secondDate, aoa_number, defaultCreditType, 1.00, &quot;Medical Marijuana Update&quot;, 1);
+        if (data.feed.entry[x][&quot;gsx$nine&quot;][&quot;$t&quot;]) totals_1A++;
+        //this.confProv.createRecordsForPOFPSsession(2, secondDate, aoa_number, defaultCreditType, 1.00, &quot;Obesity Management in Primary Care&quot;, 1);
+        if (data.feed.entry[x][&quot;gsx$ten&quot;][&quot;$t&quot;]) totals_1A++;
+        //this.confProv.createRecordsForPOFPSsession(2, secondDate, aoa_number, defaultCreditType, 1.00, &quot;Wound Care 101&quot;, 1);
+        if (data.feed.entry[x][&quot;gsx$eleven&quot;][&quot;$t&quot;]) totals_1A++;
+        //this.confProv.createRecordsForPOFPSsession(2, secondDate, aoa_number, defaultCreditType, 1.00, &quot;Practical Application of OMT in the Office&quot;, 1);
+        if (data.feed.entry[x][&quot;gsx$twelve&quot;][&quot;$t&quot;]) totals_1A++;
+        //this.confProv.createRecordsForPOFPSsession(2, secondDate, aoa_number, defaultCreditType, 1.00, &quot;Stroke Guidelines Update 2018&quot;, 1);
+        if (data.feed.entry[x][&quot;gsx$thirteen&quot;][&quot;$t&quot;]) totals_PS_1A++;
+        //this.confProv.createRecordsForPOFPSsession(2, secondDate, aoa_number, &quot;PS_1A&quot;, 1.00, &quot;HIV Basics for the Family Practitioner&quot;, 1);
+
+        // DAY THREE
+        if (data.feed.entry[x][&quot;gsx$fourteen&quot;][&quot;$t&quot;]) totals_PS_1A++;
+        //this.confProv.createRecordsForPOFPSsession(3, thirdDate, aoa_number, &quot;PS_1A&quot;, 1.00, &quot;Emails, Text and Social Media: What Physicians Need to Know&quot;, 1);
+        if (data.feed.entry[x][&quot;gsx$fifteen&quot;][&quot;$t&quot;]) totals_1A++;
+        //this.confProv.createRecordsForPOFPSsession(3, thirdDate, aoa_number, defaultCreditType, 1.00, &quot;The Management of Atopic Dermatitis and Urticaria&quot;, 1);
+        if (data.feed.entry[x][&quot;gsx$sixteen&quot;][&quot;$t&quot;]) totals_1A++;
+        //this.confProv.createRecordsForPOFPSsession(3, thirdDate, aoa_number, defaultCreditType, 1.00, &quot;An Osteopathic Approach to Asthma&quot;, 1);
+        if (data.feed.entry[x][&quot;gsx$seventeen&quot;][&quot;$t&quot;]) totals_PS_1A++;
+        // this.confProv.createRecordsForPOFPSsession(3, thirdDate, aoa_number, &quot;PS_1A&quot;, 1.00, &quot;Does Cultural Competency Make Us Better at Delivering Patient Care?&quot;, 1);
+        if (data.feed.entry[x][&quot;gsx$eighteen&quot;][&quot;$t&quot;]) totals_PS_1A++;
+        //this.confProv.createRecordsForPOFPSsession(3, thirdDate, aoa_number, &quot;PS_1A&quot;, 1.00, &quot;Implementing a Physician Well-Being Model&quot;, 1);
+
+        x++;
+        if (totals_1A) this.confProv.createRecordsForPOFPSsession(thirdDate, aoa_number, &quot;1A&quot;, totals_1A);
+        if (totals_OP_1A) this.confProv.createRecordsForPOFPSsession(thirdDate, aoa_number, &quot;OP_1A&quot;, totals_OP_1A);
+        if (totals__CA_1A) this.confProv.createRecordsForPOFPSsession(thirdDate, aoa_number, &quot;CA_1A&quot;, totals__CA_1A);
+        if (totals_PS_1A) this.confProv.createRecordsForPOFPSsession(thirdDate, aoa_number, &quot;PS_1A&quot;, totals_PS_1A);
+      }
+
+      
+
+    });
+
+}
+
+
+/*   convertPOFPSattestationSheets_bak() {
+
+    let defaultCreditType &#x3D; &quot;1A&quot;;
+    let exCeptionCreditType &#x3D; &quot;1A&quot;;
+
+    let sheetId &#x3D; &quot;1LnX9QfVeF0zuSmnaYqZ-IrylW6U0P-xMqO-JW-3CS78&quot;;
+    let url &#x3D;
+      &quot;https://spreadsheets.google.com/feeds/list/&quot; +
+      sheetId +
+      &quot;/od6/public/values?alt&#x3D;json&quot;;
+
+    let x &#x3D; 0;
+      8/3 - day 1 - 5 sessions 1 - 5
+        8/4 - day 2 - 8 sessions - 6 - 13
+        8/5 - day 3 - 5 sessions 14 - 18 
+
+    var firstDate &#x3D; new Date(&quot;2018-08-03T00:00:00&quot;.replace(/-/g, &#x27;\/&#x27;).replace(/T.+/, &#x27;&#x27;));
+    var secondDate &#x3D; new Date(&quot;2018-08-04T00:00:00&quot;.replace(/-/g, &#x27;\/&#x27;).replace(/T.+/, &#x27;&#x27;));
+    var thirdDate &#x3D; new Date(&quot;2018-08-05T00:00:00&quot;.replace(/-/g, &#x27;\/&#x27;).replace(/T.+/, &#x27;&#x27;));
+
+    this.http
+      .get(url)
+      .map(res &#x3D;&gt; res.json()) // . .json() )
+      .subscribe(data &#x3D;&gt; {
+
+        var dataLengthCheck &#x3D; data.feed.entry;
+        var dataLength &#x3D; dataLengthCheck.length;
+
+        if (dataLength &gt; 0) {
+          this.displayAlert(&#x27;Database Import&#x27;, &#x27;You are converting the attestation records of &#x27; + dataLength + &#x27; members from Google Sheets into your database.&#x27;);
+        }
+
+        while (x &lt; dataLength) {
+
+          console.log(&#x27;converting records for member &#x27; + x);
+          let aoa_number &#x3D; data.feed.entry[x][&quot;gsx$aoanumber&quot;][&quot;$t&quot;];
+
+          // DAY ONE
+          if (data.feed.entry[x][&quot;gsx$one&quot;][&quot;$t&quot;]) this.confProv.createRecordsForPOFPSsession(1, firstDate, aoa_number, defaultCreditType, 1.00, &quot;The Care of the Medically Complex Child and Their Transition to Adult Medical Care&quot;, 1);
+          if (data.feed.entry[x][&quot;gsx$two&quot;][&quot;$t&quot;]) this.confProv.createRecordsForPOFPSsession(1, firstDate, aoa_number, defaultCreditType, 1.00, &quot;Adolescent Sports Injuries&quot;, 1);
+          if (data.feed.entry[x][&quot;gsx$three&quot;][&quot;$t&quot;]) this.confProv.createRecordsForPOFPSsession(1, firstDate, aoa_number, defaultCreditType, 1.00, &quot;Urgent Care in the Family Practice Setting&quot;, 1);
+          if (data.feed.entry[x][&quot;gsx$four&quot;][&quot;$t&quot;]) this.confProv.createRecordsForPOFPSsession(1, firstDate, aoa_number, &quot;PS_1A&quot;, 1.00, &quot;Disrupting Health Care with Blockchain&quot;, 1);
+          if (data.feed.entry[x][&quot;gsx$five&quot;][&quot;$t&quot;]) 
+          {
+            if (data.feed.entry[x][&quot;gsx$five&quot;][&quot;$t&quot;] &#x3D;&#x3D;&#x3D; &#x27;x&#x27; || data.feed.entry[x][&quot;gsx$five&quot;][&quot;$t&quot;] &#x3D;&#x3D;&#x3D; &#x27;X&#x27;)
+            { exCeptionCreditType &#x3D; &quot;OP_1A&quot;}
+            this.confProv.createRecordsForPOFPSsession(1, firstDate, aoa_number, exCeptionCreditType, 2.00, &quot;Pain Management and Opioids: Balancing Risks and Benefits&quot;, 1);
+          }
+
+          // DAY TWO
+          exCeptionCreditType &#x3D; &quot;1A&quot;; // RESET IN CASE CHANGED ABOVE
+          if (data.feed.entry[x][&quot;gsx$six&quot;][&quot;$t&quot;]) 
+          {
+            if (data.feed.entry[x][&quot;gsx$six&quot;][&quot;$t&quot;] &#x3D;&#x3D;&#x3D; &#x27;x&#x27; || data.feed.entry[x][&quot;gsx$six&quot;][&quot;$t&quot;] &#x3D;&#x3D;&#x3D; &#x27;X&#x27;)
+            { exCeptionCreditType &#x3D; &quot;CA_1A&quot;}
+            this.confProv.createRecordsForPOFPSsession(2, secondDate, aoa_number, exCeptionCreditType, 2.00, &quot;Recognizing and Reporting Child Abuse in Pennsylvania&quot;, 1);
+          }
+          exCeptionCreditType &#x3D; &quot;1A&quot;; // RESET IN CASE CHANGED ABOVE
+
+          if (data.feed.entry[x][&quot;gsx$seven&quot;][&quot;$t&quot;]) this.confProv.createRecordsForPOFPSsession(2, secondDate, aoa_number, &quot;PS_1A&quot;, 1.00, &quot;Quality Improvement Whys and Hows&quot;, 1);
+          if (data.feed.entry[x][&quot;gsx$eight&quot;][&quot;$t&quot;]) this.confProv.createRecordsForPOFPSsession(2, secondDate, aoa_number, defaultCreditType, 1.00, &quot;Medical Marijuana Update&quot;, 1);
+          if (data.feed.entry[x][&quot;gsx$nine&quot;][&quot;$t&quot;]) this.confProv.createRecordsForPOFPSsession(2, secondDate, aoa_number, defaultCreditType, 1.00, &quot;Obesity Management in Primary Care&quot;, 1);
+          if (data.feed.entry[x][&quot;gsx$ten&quot;][&quot;$t&quot;]) this.confProv.createRecordsForPOFPSsession(2, secondDate, aoa_number, defaultCreditType, 1.00, &quot;Wound Care 101&quot;, 1);
+          if (data.feed.entry[x][&quot;gsx$eleven&quot;][&quot;$t&quot;]) this.confProv.createRecordsForPOFPSsession(2, secondDate, aoa_number, defaultCreditType, 1.00, &quot;Practical Application of OMT in the Office&quot;, 1);
+          if (data.feed.entry[x][&quot;gsx$twelve&quot;][&quot;$t&quot;]) this.confProv.createRecordsForPOFPSsession(2, secondDate, aoa_number, defaultCreditType, 1.00, &quot;Stroke Guidelines Update 2018&quot;, 1);
+          if (data.feed.entry[x][&quot;gsx$thirteen&quot;][&quot;$t&quot;]) this.confProv.createRecordsForPOFPSsession(2, secondDate, aoa_number, &quot;PS_1A&quot;, 1.00, &quot;HIV Basics for the Family Practitioner&quot;, 1);
+
+          // DAY THREE
+          if (data.feed.entry[x][&quot;gsx$fourteen&quot;][&quot;$t&quot;]) this.confProv.createRecordsForPOFPSsession(3, thirdDate, aoa_number, &quot;PS_1A&quot;, 1.00, &quot;Emails, Text and Social Media: What Physicians Need to Know&quot;, 1);
+          if (data.feed.entry[x][&quot;gsx$fifteen&quot;][&quot;$t&quot;]) this.confProv.createRecordsForPOFPSsession(3, thirdDate, aoa_number, defaultCreditType, 1.00, &quot;The Management of Atopic Dermatitis and Urticaria&quot;, 1);
+          if (data.feed.entry[x][&quot;gsx$sixteen&quot;][&quot;$t&quot;]) this.confProv.createRecordsForPOFPSsession(3, thirdDate, aoa_number, defaultCreditType, 1.00, &quot;An Osteopathic Approach to Asthma&quot;, 1);
+          if (data.feed.entry[x][&quot;gsx$seventeen&quot;][&quot;$t&quot;]) this.confProv.createRecordsForPOFPSsession(3, thirdDate, aoa_number, &quot;PS_1A&quot;, 1.00, &quot;Does Cultural Competency Make Us Better at Delivering Patient Care?&quot;, 1);
+          if (data.feed.entry[x][&quot;gsx$eighteen&quot;][&quot;$t&quot;]) this.confProv.createRecordsForPOFPSsession(3, thirdDate, aoa_number, &quot;PS_1A&quot;, 1.00, &quot;Implementing a Physician Well-Being Model&quot;, 1);
+
+          x++;
+        }
+
+      });
+
+  } */
+
+
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'CmeProcessesProvider.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

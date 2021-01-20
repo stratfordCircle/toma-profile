@@ -1,0 +1,135 @@
+<ion-grid text-wrap no-padding>
+        <ion-item>
+            <ion-row>
+                <ion-col col-2></ion-col>
+                <ion-col class="sessionLabel_NoItal" col-7>SESSION</ion-col>
+                <ion-col class="sessionLabel_NoItal" col-3>CREDITS</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-2>
+                    <button small button-clear ion-button *ngIf="this.session_5 !== true" (click)="updateSession(this.session_5, 5)">
+                        <ion-icon name="checkmark"></ion-icon>
+                    </button>
+                    <button small ion-button *ngIf="this.session_5 === true" (click)="updateSession(this.session_5, 5)" color="secondary">
+                        <ion-icon isActive=true name="checkmark"></ion-icon>
+                    </button>
+                </ion-col>
+                <ion-col class="sessionLabel" col-7>Endocrinology [4.5 1A]</ion-col>
+                <ion-col class="sessionLabel" col-3></ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-2></ion-col>
+                <ion-col col-7>Famous People with Diabetes</ion-col>
+                <ion-col col-1 class="num-align">1</ion-col>
+                <ion-col col-2></ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-2></ion-col>
+                <ion-col col-7>Assessing Current Trends in Diabetes</ion-col>
+                <ion-col col-1 class="num-align">.75</ion-col>
+                <ion-col col-2></ion-col>
+            </ion-row>
+             <ion-row> <!-- TWO ENDICRINOLOGY PANEL DISCUSSIONS ARE LISTED BUT WE ONLY WRITE ONE RECORD TO THE DB - AND GIVE IT A FULL HOUR OF CREDIT -->
+                <ion-col col-2></ion-col>
+                <ion-col col-7>Endocrinology Panel Discussion</ion-col>
+                <ion-col col-1 class="num-align">.5</ion-col>
+                <ion-col col-2></ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-2></ion-col>
+                <ion-col col-7>Osteopathic Comment in Endocrinology</ion-col>
+                <ion-col col-1 class="num-align">.25</ion-col>
+                <ion-col col-2></ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-2></ion-col>
+                <ion-col col-7>Thyroid Concerns for the Primary Care Provider</ion-col>
+                <ion-col col-1 class="num-align">.75</ion-col>
+                <ion-col col-2></ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-2></ion-col>
+                <ion-col col-7>Pharmacologic & Surgical Treatment for Obesity</ion-col>
+                <ion-col col-1 class="num-align">.75</ion-col>
+                <ion-col col-2></ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-2></ion-col>
+                <ion-col col-7>Endocrinology Panel Discussion</ion-col>
+                <ion-col col-1 class="num-align">.5</ion-col>
+                <ion-col col-2></ion-col>
+            </ion-row>
+        </ion-item>
+
+        <ion-row class="rowSpacer"></ion-row>  
+        <ion-item>
+            <ion-row>
+              <ion-col col-2><button small button-clear ion-button *ngIf="this.session_6 !== true" (click)="updateSession(this.session_6, 6)">
+                  <ion-icon name="checkmark"></ion-icon></button>
+                <button small ion-button *ngIf="this.session_6 === true" (click)="updateSession(this.session_6, 6)" color="secondary">
+                  <ion-icon isActive=true name="checkmark"></ion-icon></button></ion-col>
+              <ion-col class="sessionLabel" col-7>Primary Care [2.25 1A; 2 1A PS]</ion-col>
+              <ion-col class="sessionLabel" col-3></ion-col>
+            </ion-row>
+           <!--  First Line Antibiotic Choices for Common Infections................ (PS) 1
+            Missing the Mark: Missed Opportunities for Screening............ (PS) 1
+            Osteopathic Comment in Primary Care.......................................... .25
+            Controversies in Prostate Screening................................................. 1
+            Dermatology Pearls for Primary Care............................................... 1 -->
+            <ion-row>
+                <ion-col col-2></ion-col>
+                <ion-col col-7>First Line Antibiotic Choices for Common Infections</ion-col>
+                <ion-col col-1 class="num-align">1</ion-col>
+                <ion-col col-2>(PS)</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col col-2></ion-col>
+              <ion-col col-7>Missing the Mark: Missed Opportunities for Screening</ion-col>
+              <ion-col col-1 class="num-align">1</ion-col>
+              <ion-col col-2>(PS)</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-2></ion-col>
+                <ion-col col-7>Osteopathic Comment in Primary Care</ion-col>
+                <ion-col col-1 class="num-align">.25</ion-col>
+                <ion-col col-2></ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col col-2></ion-col>
+                  <ion-col col-7>Controversies in Prostate Screening</ion-col>
+                  <ion-col col-1 class="num-align">1</ion-col>
+                  <ion-col col-2></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-2></ion-col>
+                    <ion-col col-7>Dermatology Pearls for Primary Care</ion-col>
+                    <ion-col col-1 class="num-align">1</ion-col>
+                    <ion-col col-2></ion-col>
+                  </ion-row>
+
+          </ion-item>  
+          <ion-row class="rowSpacer"></ion-row>  
+          <ion-item>
+              <ion-row>
+                <ion-col col-2><button small button-clear ion-button *ngIf="this.session_7 !== true" (click)="updateSession(this.session_7, 7)">
+                    <ion-icon name="checkmark"></ion-icon></button>
+                  <button small ion-button *ngIf="this.session_7 === true" (click)="updateSession(this.session_7, 7)" color="secondary">
+                    <ion-icon isActive=true name="checkmark"></ion-icon></button></ion-col>
+                <ion-col class="sessionLabel" col-7>Audiovisual Self Study [3 1B]</ion-col>
+                <ion-col class="sessionLabel" col-3></ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col col-2></ion-col>
+                  <ion-col col-7>Audiovisual Self Study</ion-col>
+                  <ion-col col-1 class="num-align">3</ion-col>
+                  <ion-col col-2></ion-col>
+              </ion-row>
+              </ion-item>
+          <ion-row class="rowSpacer"></ion-row>  
+          <ion-row>
+              <ion-col col-2></ion-col>
+              <ion-col class="sessionLabel_NoItal" col-7><strong>Day Two CME Credits Earned</strong></ion-col>
+              <ion-col class="sessionLabel_NoItal_right" col-1>{{totalCredits}}</ion-col>        
+              <ion-col col-2></ion-col>
+          </ion-row>                  
+        </ion-grid>

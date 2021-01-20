@@ -1,0 +1,146 @@
+<ion-grid text-wrap no-padding>
+  <ion-item>
+      <ion-row>
+          <ion-col col-2></ion-col>
+          <ion-col class="sessionLabel_NoItal" col-7>SESSION</ion-col>
+          <ion-col class="sessionLabel_NoItal" col-3>CREDITS</ion-col>
+      </ion-row>    
+  <ion-row>
+    <ion-col col-2><button small button-clear ion-button *ngIf="this.session_1 !== true" (click)="updateSession(this.session_1, 1)">
+        <ion-icon name="checkmark"></ion-icon></button>
+      <button small ion-button *ngIf="this.session_1 === true" (click)="updateSession(this.session_1, 1)" color="secondary">
+        <ion-icon isActive=true name="checkmark"></ion-icon></button></ion-col>
+    <ion-col class="sessionLabel" col-7>Opening Session [.75 1A; .75 1A PS; 1.5 1A OP]</ion-col>
+    <ion-col class="sessionLabel" col-3></ion-col>
+  </ion-row>
+
+  <ion-row>
+      <ion-col col-2></ion-col>
+      <ion-col col-7>Clinical Assembly Grand Opening & Introductions</ion-col>
+      <ion-col col-1 class="num-align">.5</ion-col>
+      <ion-col col-2></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-2></ion-col>
+    <ion-col col-7>Combating the Opioid & Heroin Crisis in Pennsylvania</ion-col>
+    <ion-col col-1 class="num-align">.5</ion-col>
+    <ion-col col-2>(OP_1A)</ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col col-2></ion-col>
+      <ion-col col-7>The Federal Approach to Pain Management</ion-col>
+      <ion-col col-1 class="num-align">.75</ion-col>
+      <ion-col col-2>(PS)</ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col col-2></ion-col>
+        <ion-col col-7>Physicians in the Crosshairs: To Treat or Not to Treat Pain</ion-col>
+        <ion-col col-1 class="num-align">1</ion-col>
+        <ion-col col-2>(OP)</ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col col-2></ion-col>
+          <ion-col col-7>???? Clinical Writing Contest Awards Presentation</ion-col>
+          <ion-col col-1 class="num-align">.25</ion-col>
+          <ion-col col-2></ion-col>
+        </ion-row>
+</ion-item>  
+  <ion-row class="rowSpacer"></ion-row>  
+  <ion-item>
+  <ion-row>
+    <ion-col col-2><button small button-clear ion-button *ngIf="this.session_2 !== true" (click)="updateSession(this.session_2, 2)">
+      <ion-icon name="checkmark"></ion-icon></button>
+      <button small ion-button *ngIf="this.session_2 === true" (click)="updateSession(this.session_2, 2)" color="secondary">
+        <ion-icon isActive=true name="checkmark"></ion-icon></button></ion-col>
+    <ion-col class="sessionLabel" col-7><i>Optional Course [3 1A PS]</i></ion-col>
+    <ion-col  col-3></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-2></ion-col>
+    <ion-col col-7>Basic Life Support for Physicians</ion-col>
+    <ion-col col-1 class="num-align">3</ion-col>
+    <ion-col col-2>(PS)</ion-col>
+  </ion-row>
+</ion-item>
+
+
+<ion-row class="rowSpacer"></ion-row>  
+<ion-item>
+    <ion-row>
+      <ion-col col-2><button small button-clear ion-button *ngIf='this.session_3 !== true' (click)='updateSession(this.session_3, 3)'>
+          <ion-icon name='checkmark'></ion-icon></button>
+        <button small ion-button *ngIf='this.session_3 === true' (click)='updateSession(this.session_3, 3)' color='secondary'>
+          <ion-icon isActive=true name='checkmark'></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col class="sessionLabel" col-7>Cardiology [5 1A]</ion-col>
+      <ion-col class="sessionLabel" col-3></ion-col>
+    </ion-row>
+  <!--   Cancer & the Heart 2018.................................................................... 1
+Carotid Artery Disease Management................................................. 1
+Osteopathic Comment in Cardiology............................................... .25
+Atrial Fibrillation Update.................................................................... 1
+Left Atrial Appendage Occlusion..................................................... .75
+LVAD & Other Devices in Cardiothoracic Surgery.............................. 1 -->
+    <ion-row>
+        <ion-col col-2></ion-col>
+        <ion-col col-7>Cancer & the Heart 2018</ion-col>
+        <ion-col col-1 class="num-align">1</ion-col>
+        <ion-col col-2></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-2></ion-col>
+      <ion-col col-7>Carotid Artery Disease Management</ion-col>
+      <ion-col col-1 class="num-align">1</ion-col>
+      <ion-col col-2></ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col col-2></ion-col>
+        <ion-col col-7>Osteopathic Comment in Cardiology</ion-col>
+        <ion-col col-1 class="num-align">.25</ion-col>
+        <ion-col col-2></ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col col-2></ion-col>
+          <ion-col col-7>Atrial Fibrillation Update</ion-col>
+          <ion-col col-1 class="num-align">1</ion-col>
+          <ion-col col-2></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-2></ion-col>
+            <ion-col col-7>Left Atrial Appendage Occlusion</ion-col>
+            <ion-col col-1 class="num-align">.75</ion-col>
+            <ion-col col-2></ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col col-2></ion-col>
+              <ion-col col-7>LVAD & Other Devices in Cardiothoracic Surgery</ion-col>
+              <ion-col col-1 class="num-align">1</ion-col>
+              <ion-col col-2></ion-col>
+            </ion-row>          
+  </ion-item>  
+  <ion-row class="rowSpacer"></ion-row>  
+  <ion-item>
+      <ion-row>
+        <ion-col col-2><button small button-clear ion-button *ngIf="this.session_4 !== true" (click)="updateSession(this.session_4, 4)">
+            <ion-icon name="checkmark"></ion-icon></button>
+          <button small ion-button *ngIf="this.session_4 === true" (click)="updateSession(this.session_4, 4)" color="secondary">
+            <ion-icon isActive=true name="checkmark"></ion-icon></button></ion-col>
+        <ion-col class="sessionLabel" col-7>Audiovisual Self Study [3 1B]</ion-col>
+        <ion-col class="sessionLabel" col-3></ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col col-2></ion-col>
+          <ion-col col-7>Audiovisual Self Study</ion-col>
+          <ion-col col-1 class="num-align">3</ion-col>
+          <ion-col col-2></ion-col>
+      </ion-row>
+      </ion-item>
+  <ion-row class="rowSpacer"></ion-row>  
+  <ion-row>
+      <ion-col col-2></ion-col>
+      <ion-col class="sessionLabel_NoItal" col-7><strong>Day One CME Credits Earned</strong></ion-col>
+      <ion-col class="sessionLabel_NoItal_right" col-1>{{totalCredits}}</ion-col>        
+      <ion-col col-2></ion-col>
+  </ion-row>                  
+</ion-grid>

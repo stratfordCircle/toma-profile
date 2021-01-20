@@ -1,0 +1,121 @@
+pofps-cert {
+
+    h3 {
+        text-decoration: underline;
+    }
+
+
+    .cert-header 
+    {
+        font-size: 24px;
+        font-weight: bold;
+        color: map-get($colors, client-primary);
+        align-content: center
+
+    }
+
+    .cert-header1 
+    {
+        font-size: 24px;
+        font-weight: bold;
+        color: map-get($colors, client-primary);
+        align-content: center
+
+    }
+
+    .cert-header2 
+    {
+        font-size: 18px;
+        font-weight: bold;
+        color: map-get($colors, client-primary);
+        align-content: center
+
+    }
+
+    .normBold16
+    {
+        font-size: 16px;
+        font-weight: bold;
+//        align-content: center
+    }
+
+    .normBold
+    {
+        font-size: 14px;
+        font-weight: bold;
+  //      align-content: center
+    }
+    
+    .norm
+    {
+        font-size: 14px;
+    }    
+
+}
+
+/* @page {
+    margin: 0mm;
+    align: center;
+    overflow: hidden;
+}
+
+@media print {
+
+    @page {
+        margin: 0mm;
+        align: center;
+        overflow: hidden;
+    }
+
+    header nav, footer {
+    display: none;
+    }
+
+    .navButtons {
+        display: none;
+    }
+
+}
+
+pofps-cert {
+
+    h3 {
+        text-decoration: underline;
+    }
+
+    .cert-header1 
+    {
+        font-size: 24px;
+        font-weight: bold;
+        color: map-get($colors, client-primary);
+        align-content: center
+
+    }
+
+    .cert-header2 
+    {
+        font-size: 18px;
+        font-weight: bold;
+        color: map-get($colors, client-primary);
+        align-content: center
+
+    }
+
+    .normBold16
+    {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .normBold
+    {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .norm
+    {
+        font-size: 14px;
+    }
+
+} */

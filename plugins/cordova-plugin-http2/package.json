@@ -1,0 +1,63 @@
+{
+  "_from": "cordova-plugin-http2",
+  "_id": "cordova-plugin-http2@1.0.1",
+  "_inBundle": false,
+  "_integrity": "sha1-tDzapitOtfx3FY5gDsSDxKJwH9c=",
+  "_location": "/cordova-plugin-http2",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-http2",
+    "name": "cordova-plugin-http2",
+    "escapedName": "cordova-plugin-http2",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-http2/-/cordova-plugin-http2-1.0.1.tgz",
+  "_shasum": "b43cdaa62b4eb5fc77158e600ec483c4a2701fd7",
+  "_spec": "cordova-plugin-http2",
+  "_where": "C:\\~y\\ionic\\pomo-profile\\node_modules",
+  "author": {
+    "name": "Dima Snisarenko"
+  },
+  "bugs": {
+    "url": "https://github.com/sneas/cordova-HTTP2/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-http2",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "Cordova / Phonegap plugin for communicating with HTTP servers using SSL pinning",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "homepage": "https://github.com/sneas/cordova-HTTP2#readme",
+  "keywords": [
+    "cordova",
+    "device",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-http2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sneas/cordova-HTTP2.git"
+  },
+  "version": "1.0.1"
+}

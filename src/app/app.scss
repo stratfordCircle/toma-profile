@@ -1,0 +1,257 @@
+// http://ionicframework.com/docs/theming/
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// auTOMAtically applied to the <body> element in the app.
+
+@media (min-width: 1201px) {
+    .app-root {
+      width: 1200px;
+      margin: auto;
+      position: relative;
+    }
+  
+     .scroll-content {
+      overflow-y:auto;
+    } 
+  }
+
+    @media print{
+
+   //  ion-header{ display: none !important; }  
+  
+    body, .app-root, .split-pane, .ion-page, ion-app, ion-nav { contain: none; }
+    body, ion-nav{ overflow: initial; }
+    body{ position: static; }
+  
+     [ion-content-print]{ overflow-y: visible !important; position: relative; }
+
+
+    html, body, .app-root, .ion-content, ion-app {
+        height: 100%; 
+        margin: 0 !important; 
+        padding: 0 !important;
+        overflow: visible !important;
+        margin: auto;
+        position: relative;
+        overflow-y:auto;
+      } 
+
+  }   
+
+  .toolbar-background {
+    background-color:white;
+    }
+
+    .navbarStyle{
+        border-bottom: 5px color($colors, client-primary) solid;
+        }
+
+        
+.activeHighLight {
+    background-color: map-get($colors, secondary);
+}
+
+.foo .alert-message {
+    white-space: pre;
+}
+
+.sessionLabel {
+    text-align: left;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.sessionLabel_right {
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.num-align {
+    text-align: right;
+}
+
+.sessionLabel_NoItal {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.sessionLabel_NoItal_right {
+    text-align: right;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.rowSpacer {
+    height: 25px;
+}
+
+/* @media (min-width: 1201px) {
+    .app-root {
+      width: 1200px;
+      margin: auto;
+      position: relative;
+    }
+} */
+   /*  .scroll-content {
+      overflow-y:auto;
+    } */
+  
+/*     @page {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+    } */
+
+/*    @media print {
+         @page { margin: 0; }
+        body { margin: 1.6cm; } 
+       
+        }
+
+        */
+
+/*     @media print {
+        #Header, #Footer { display: none !important; }
+        @page { 
+            contain: none;
+            margin: none !important; ; 
+            margin-top: 0 !important; ;
+            margin-bottom: 0 !important; ;
+            margin-left: 0 !important; ;
+            margin-right: 0 !important; ;
+            height: 100% !important; ; 
+            width: 100% !important; ;
+            padding: 0 !important;
+            overflow: visible !important;            
+        }    
+
+        html, body, .app-root, .ion-content, .ion-header, .ion-grid, .ion-row, .ion-col, .split-pane, .ion-page, .fixed-content, .scroll-content, ion-app, ion-nav {
+            contain: none;
+//            margin: none !important; ; 
+            margin-top: 0 !important; ;
+            margin-bottom: 0 !important; ;
+            margin-left: 0 !important; ;
+            margin-right: 0 !important; ;
+             height: 100% !important; ; 
+            width: 100% !important; ; 
+            padding: 0 !important;
+            overflow: visible !important;
+            //position: relative;
+         } 
+    } */
+
+/*    @media print{
+
+    @page { margin: 0; } */
+
+/*      ion-header{ display: none !important; }
+
+     @page { margin: 0; }
+
+     .footer,
+     #non-printable {
+         display: none !important;
+     }
+     #printable {
+         display: block;
+     } */
+
+/* 
+      html, body, .app-root, .ion-content, .ion-header, ion-app {
+        height: 100%; 
+        margin: 0 !important; 
+        padding: 0 !important;
+        overflow: visible !important;
+        position: relative;
+     } 
+ */
+  
+/*      @page { margin: 0; }
+    // body { margin: 1.6cm; }
+
+    body, .app-root, .split-pane, .ion-page, ion-app, ion-nav { contain: none; }
+    body, ion-nav{ overflow: initial; }
+    body{ position: static; }
+  
+    [ion-content-print]{ overflow-y: visible !important; position: relative; }
+
+    html, body, .app-root, .ion-content, ion-app {
+        height: 100%; 
+        margin: 0 !important; 
+        padding: 0 !important;
+        overflow: visible !important;
+        margin: auto;
+        position: relative;
+//            overflow-y:auto;
+      }
+ */
+ // }
+/* 
+.toolbar-background {
+background-color:white;
+}
+
+.navbarStyle{
+border-bottom: 5px color($colors, client-primary) solid;
+}
+
+.activeHighLight {
+    background-color: map-get($colors, secondary);
+}
+
+.foo .alert-message {
+    white-space: pre;
+}
+
+.sessionLabel {
+    text-align: left;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.num-align {
+    text-align: right;
+}
+
+.sessionLabel_NoItal {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.sessionLabel_NoItal_right {
+    text-align: right;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.rowSpacer {
+    height: 25px;
+}
+ */
+
+
+/*   $grid-max-widths: (
+    sm: 420px,
+    md: 420px,
+    lg: 420px,
+    XL: 420px
+  ); */
+  

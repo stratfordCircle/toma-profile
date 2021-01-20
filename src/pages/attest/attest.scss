@@ -1,0 +1,28 @@
+page-attest {
+
+    .col-title 
+{
+    font-size: 24px;
+    font-weight: bold;
+    color: map-get($colors, client-primary);
+    align-content: center
+
+}
+
+.creditSize {
+    font-size: 18px;
+}
+
+.pairedStyle {
+    background-color: aqua;
+}
+
+input[type=checkbox] {
+    transform: scale(2.5);
+}
+
+}
+
+.row-custom-bg:nth-of-type(odd) {
+    background: rgb(224, 223, 223);
+}

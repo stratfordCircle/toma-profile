@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "authtest": "authone-5d242",
+    "development": "nope1",
+    "production": "toma-cme",
+    "pepper": "pepper-b4798"
+  }
+}

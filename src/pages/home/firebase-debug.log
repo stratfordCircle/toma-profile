@@ -1,0 +1,21 @@
+[debug] [2018-06-24T16:57:46.131Z] ----------------------------------------------------------------------
+[debug] [2018-06-24T16:57:46.134Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Yubnob\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase target
+[debug] [2018-06-24T16:57:46.134Z] CLI Version:   3.16.0
+[debug] [2018-06-24T16:57:46.134Z] Platform:      win32
+[debug] [2018-06-24T16:57:46.134Z] Node Version:  v8.11.1
+[debug] [2018-06-24T16:57:46.135Z] Time:          Sun Jun 24 2018 11:57:46 GMT-0500 (Central Daylight Time)
+[debug] [2018-06-24T16:57:46.135Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-06-24T16:57:46.147Z] TypeError: utils.error is not a function
+    at Command._action (C:\Users\Yubnob\AppData\Roaming\npm\node_modules\firebase-tools\commands\target.js:24:20)
+    at C:\Users\Yubnob\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:176:29
+    at tryCatch (C:\Users\Yubnob\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\rsvp\dist\rsvp.js:525:12)
+    at invokeCallback (C:\Users\Yubnob\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\rsvp\dist\rsvp.js:538:13)
+    at publish (C:\Users\Yubnob\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\rsvp\dist\rsvp.js:508:7)
+    at flush (C:\Users\Yubnob\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\rsvp\dist\rsvp.js:2415:5)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+    at Function.Module.runMain (module.js:695:11)
+    at startup (bootstrap_node.js:188:16)
+[error] 
+[error] Error: An unexpected error has occurred.

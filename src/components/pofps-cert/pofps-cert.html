@@ -1,0 +1,207 @@
+<ion-grid text-wrap>
+          <ion-row justify-content-center class="row-align-bottom" bottom >
+
+          <img src="../../assets/imgs/image.png">
+
+
+        </ion-row>
+
+        <ion-row text-center>
+
+          <ion-col class="cert-header1">
+
+              Pennsylvania Osteopathic Medical Association <br><br>
+              <div class="cert-header2">
+              Statement of CME Credit
+            </div>  
+
+
+</ion-col>
+</ion-row>
+<br><br>
+
+            <ion-row>
+                <ion-col text-left>
+            
+            
+            POMA provides the information below which serves as documentation for CME activity completion and should be retained for your personal records.
+            <br><br>
+
+</ion-col>
+</ion-row>
+
+
+            <ion-row text-center>
+                <ion-col class="normBold">
+
+                  The Pennsylvania Osteopathic Medical Association confirms that <br><br>
+                  </ion-col>
+                  </ion-row>
+                  <ion-row text-center>
+                  <ion-col class="normBold16">
+            <!-- <FIRST NAME> <MIDDLE NAME> <LAST NAME>, <CREDENTIAL> -->
+            {{this.token_first}}{{this.token_middle}}{{this.token_last}}{{this.token_suffix}}{{this.token_credential}}
+
+            <br><br>
+
+            has attended the POFPS 43rd Annual CME Symposium, held August 3-5, 2018 at the Hershey Lodge in Hershey, Pennsylvania, and has been awarded the following credits:
+            <br>
+            <br>
+
+            {{ this.total_1A }} Category 1A AOA CME credits, which includes {{ this.total_1A_PS }} patient safety credits, {{ this.total_1A_OP }} opioid credits and {{ this.total_1A_CA }} child abuse credits applicable to Pennsylvania licensure requirements.
+
+            <br>
+            <br>
+          </ion-col>
+        </ion-row>
+        
+        
+                    <ion-row text-left>
+                        <ion-col class="norm">
+
+
+            POMA is accredited by the American Osteopathic Association to provide osteopathic continuing medical education for physicians. The POFPS 43rd Annual CME Symposium has been planned and implemented in accordance with the accreditation requirements and policies of the AOA Council on Continuing Medical Education.
+            <br>
+            <br>
+            POMA designates this live program for a maximum of 20 Category 1-A AOA CME credits. Attendees should only claim credit commensurate with the extent of their participation in the educational activity.
+            <br>
+            <br>
+            If you have any questions, please contact the POMA CME Office at (717) 939-9318, ext. 140 or email <a href="mailto:cme@poma.org" target="_top">cme@poma.org</a>
+            
+            
+
+          </ion-col>
+        </ion-row>
+
+    </ion-grid>    
+
+    <div class="navButtons">
+
+      <ion-row>
+    <ion-col>
+      <button 
+      type="reset"
+      bottom
+      ion-button
+      small
+      right
+      color="primary"
+      (click)="printPage();">
+      Print
+      </button>
+    </ion-col>
+    <ion-col>
+        <button 
+        ion-button
+        small
+        onclick="window.history.back();">
+        Back
+        </button>
+      </ion-col>
+    </ion-row>
+   <!--  adf <br>
+    adf <br>
+    adf <br>
+    adf <br>
+    adf <br>
+    adf <br>
+    adf <br>
+    adf <br>
+    adf <br>
+    adf <br>
+    adf <br>
+    adf <br>
+    adf <br>
+    adf <br>
+    adf <br>
+    adf <br>
+    adf <br>
+    adf <br> -->
+
+    </div>  
+
+
+    
+    
+
+<!--     <button onclick="window.history.back();">Back</button>   -->
+    
+      
+
+
+<!--
+    
+    // BELOW IS THE FORMAT THAT WAS USED FOR THE SUMMARY AT THE CONFERENCE
+
+
+    <ion-grid>
+    <ion-row><ion-col col-1></ion-col>
+    <ion-col>
+    <h1>POMA 2018 Clinical Assembly</h1>
+
+    <h3>CONTINUING MEDICAL EDUCATION ATTESTATION FORM</h3>
+  </ion-col>  
+  </ion-row>
+    </ion-grid>
+
+    <ion-item>
+    
+    <b>Name:</b> {{this.token_first}} {{this.token_last}} {{this.token_suffix}} {{this.token_credential}} 
+    <br>
+    <b>AOA #</b> {{this.token_Num}}
+    <br>
+    <b>Date:</b> {{this.signDate | date: 'MM/dd/yyyy'}} 
+    <br>  
+  </ion-item>
+
+  <BR><BR>  
+
+<ion-grid>
+
+<ion-row><ion-col col-1></ion-col><ion-col col-11><b>TOTAL CME CREDITS EARNED:</b> </ion-col></ion-row>    
+<ion-row>
+  <ion-col col-1></ion-col><ion-col col-2><b>1A:</b></ion-col><ion-col col-9>{{ this.total_1A }}</ion-col>
+</ion-row>
+<ion-row><ion-col col-1></ion-col><ion-col col-2><b>1A Patient Safety:</b></ion-col><ion-col col-9>{{ this.total_1A_PS }} </ion-col></ion-row>
+<ion-row><ion-col col-1></ion-col><ion-col col-2><b>1A Opiod:</b></ion-col><ion-col col-9>{{ this.total_1A_OP }}</ion-col></ion-row>
+<ion-row><ion-col col-1></ion-col><ion-col col-2><b>1A Child Abuse:</b></ion-col><ion-col col-9>{{ this.total_1A_CA }}</ion-col></ion-row>
+<ion-row><ion-col col-1></ion-col><ion-col col-2><b>1B:</b></ion-col><ion-col col-9>{{ this.total_1B }}</ion-col></ion-row>
+<ion-row><ion-col col-1></ion-col><ion-col col-2><B>Total Credits: </B></ion-col><ion-col col-9><b>{{ this.totalCredits }}</b></ion-col></ion-row>
+
+</ion-grid>  
+    <br>
+   <br>
+    <br>
+    <br>
+    <br>
+
+   
+
+<br>
+<br>
+
+<ion-grid>
+
+    <ion-row><ion-col col-1></ion-col><ion-col col-11><div *ngIf="this.alreadySigned === true">
+        <button small button-clear ion-button (click)="signDocument();" color="secondary">
+          <ion-icon isActive=true name="checkmark"></ion-icon>
+        </button>
+        I certify that the above session list is correct.
+    </div>
+    
+    <div *ngIf="this.alreadySigned !== true">
+    <button small button-clear ion-button  (click)="signDocument();">
+      <ion-icon name="checkmark"></ion-icon>
+    </button>
+        I certify that the above session list is correct.
+    </div></ion-col></ion-row>    
+</ion-grid>    
+<br>
+
+<br>
+<ion-row><ion-col col-1></ion-col><ion-col col-11>
+<b>Details for all credits will appear in your CME Report as soon as approved.</b>
+</ion-col></ion-row>
+
+
+   -->

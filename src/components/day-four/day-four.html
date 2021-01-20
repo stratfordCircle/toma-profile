@@ -1,0 +1,93 @@
+<ion-grid text-wrap no-padding>
+        <ion-item>
+            <ion-row>
+                <ion-col col-2></ion-col>
+                <ion-col class="sessionLabel_NoItal" col-7>SESSION</ion-col>
+                <ion-col class="sessionLabel_NoItal" col-3>CREDITS</ion-col>
+            </ion-row>    
+        <ion-row>
+          <ion-col col-2><button small button-clear ion-button *ngIf="this.session_11 !== true" (click)="updateSession(this.session_11, 11)">
+              <ion-icon name="checkmark"></ion-icon></button>
+            <button small ion-button *ngIf="this.session_11 === true" (click)="updateSession(this.session_11, 11)" color="secondary">
+              <ion-icon isActive=true name="checkmark"></ion-icon></button></ion-col>
+          <ion-col class="sessionLabel" col-7>Critical Issues in Health Care [1 1A; 3 1A PS; 1 1A OP]</ion-col>
+          <ion-col class="sessionLabel" col-3></ion-col>
+        </ion-row>
+      
+      <!--   A Community Response to the Opioid Epidemic.........................(OP) 1
+        Providing Patient Care by Caring for the Doc.............................(PS) 1
+        Electronic Health Care: Now and in the Future......................... (PS) 1
+        Cross-generational Communication...........................................(PS) 1
+        Medical Marijuana: What They Didn’t Teach Us in School................. 1 -->
+      
+        <ion-row>
+            <ion-col col-2></ion-col>
+            <ion-col col-7>A Community Response to the Opioid Epidemic</ion-col>
+            <ion-col col-1 class="num-align">1</ion-col>
+            <ion-col col-2>(OP)</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-2></ion-col>
+          <ion-col col-7>Providing Patient Care by Caring for the Doc</ion-col>
+          <ion-col col-1 class="num-align">1</ion-col>
+          <ion-col col-2>(PS)</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-2></ion-col>
+            <ion-col col-7>Electronic Health Care: Now and in the Future</ion-col>
+            <ion-col col-1 class="num-align">1</ion-col>
+            <ion-col col-2>(PS)</ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col col-2></ion-col>
+              <ion-col col-7>Cross-generational Communication</ion-col>
+              <ion-col col-1 class="num-align">1</ion-col>
+              <ion-col col-2>(PS)</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-2></ion-col>
+                <ion-col col-7>Medical Marijuana: What They Didn’t Teach Us in School</ion-col>
+                <ion-col col-1 class="num-align">1</ion-col>
+                <ion-col col-2></ion-col>
+              </ion-row>
+      </ion-item>  
+      <ion-row class="rowSpacer"></ion-row>  
+      <ion-item>
+          <ion-row>
+            <ion-col col-2><button small button-clear ion-button *ngIf="this.session_12 !== true" (click)="updateSession(this.session_12, 12)">
+                <ion-icon name="checkmark"></ion-icon></button>
+              <button small ion-button *ngIf="this.session_12 === true" (click)="updateSession(this.session_12, 12)" color="secondary">
+                <ion-icon isActive=true name="checkmark"></ion-icon></button></ion-col>
+            <ion-col class="sessionLabel" col-7>Health Care and the Law [2 1A PS; 2 1A CA]</ion-col>
+            <ion-col class="sessionLabel" col-3></ion-col>
+          </ion-row>
+ 
+          <ion-row>
+              <ion-col col-2></ion-col>
+              <ion-col col-7>Recognizing & Reporting Child Abuse in Pennsylvania <i>(Child Abuse credits will be reflected on the CME record upon approval by the course provider and Pennsylvania Department of State.)</i></ion-col>
+              <ion-col col-1 class="num-align">2</ion-col>
+              <ion-col col-2>(CA)</ion-col>
+          </ion-row>
+          <!-- <ion-row><ion-col col-2></ion-col><ion-col col-10><i>(Child Abuse credits will be reflected on the CME record upon approval by the course provider and Pennsylvania Department of State.)</i></ion-col></ion-row> -->
+          <ion-row>
+            <ion-col col-2></ion-col>
+            <ion-col col-7>Harassment and the #MeToo Era</ion-col>
+            <ion-col col-1 class="num-align">1</ion-col>
+            <ion-col col-2></ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col col-2></ion-col>
+              <ion-col col-7>Florida Licensure Law Update</ion-col>
+              <ion-col col-1 class="num-align">1</ion-col>
+              <ion-col col-2></ion-col>
+            </ion-row>
+        </ion-item>  
+        
+        <ion-row class="rowSpacer"></ion-row>  
+        <ion-row>
+            <ion-col col-2></ion-col>
+            <ion-col class="sessionLabel_NoItal" col-7><strong>Day Four CME Credits Earned</strong></ion-col>
+            <ion-col class="sessionLabel_NoItal_right" col-1>{{totalCredits}}</ion-col>        
+            <ion-col col-2></ion-col>
+        </ion-row>                  
+      </ion-grid>

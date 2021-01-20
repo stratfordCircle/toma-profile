@@ -1,0 +1,113 @@
+page-manage-document {
+    ion-card {
+        box-shadow: none;
+        }
+        
+        ion-toolbar {
+        text-align: center;
+        }
+        
+        .progress-outer {
+            width: 33%;
+            margin: 10px 2%;
+            padding: 1px;
+            text-align: center;
+            background-color: #f4f4f4;
+            border: 1px solid #dcdcdc;
+            color: #fff;
+            border-radius: 10px;
+        }
+     
+        .progress-inner {
+            min-width: 5%;
+            white-space: nowrap;
+            overflow: hidden;
+            padding: 1px;
+            border-radius: 10px;
+            background-color: map-get($colors, primary);
+        }
+    
+        .desktop page-manage-document ion-card {
+            box-shadow: none;
+          }
+          
+        .desktop page-manage-document ion-toolbar {
+            text-align: center;
+         }
+
+        .submit-button {
+            background-color: map-get($colors, client-primary);
+            color: white;
+    }
+
+}    
+
+
+
+/*     ion-card {
+    box-shadow: none;
+    }
+    
+    ion-toolbar {
+    text-align: center;
+    }
+    
+    .progress-outer {
+        width: 33%;
+        margin: 10px 2%;
+        padding: 1px;
+        text-align: center;
+        background-color: #f4f4f4;
+        border: 1px solid #dcdcdc;
+        color: #fff;
+        border-radius: 10px;
+    }
+ 
+    .progress-inner {
+        min-width: 5%;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 1px;
+        border-radius: 10px;
+        background-color: map-get($colors, primary);
+    }
+
+    .desktop page-manage-document ion-card {
+        box-shadow: none;
+      }
+      
+      .desktop page-manage-document ion-toolbar {
+        text-align: center;
+     } */
+      
+
+
+    /* .inputfile {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+    
+    .inputfile + label {
+        font-size: 1.25em;
+        font-weight: 700;
+        color: white;
+        background-color: black;
+        display: inline-block;
+        cursor: pointer; //"hand" cursor 
+//        pointer-events: none;
+    }
+    
+    .inputfile:focus + label,
+    .inputfile + label:hover {
+        background-color: gray;
+    }
+
+    .inputfile:focus + label {
+        outline: 1px dotted #000;
+        outline: -webkit-focus-ring-color auto 5px;
+    }
+ */

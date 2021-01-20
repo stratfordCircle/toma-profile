@@ -1,0 +1,29 @@
+ion-grid {
+    height: 100%;
+}
+
+ion-row {
+    height: 12%;
+}
+
+.help-title {
+    font-size: 32px;
+    color: map-get($colors, client-primary);
+}
+
+.ion-col-border {
+    border: 1px solid;
+    border-color: map-get($colors, client-primary);
+
+    background-color: rgb(226, 226, 226);
+}
+
+.checkmark-size {
+    font-size: 12px;
+    justify-content: flex-end;
+  }
+
+.row-align-bottom {
+    vertical-align: bottom;
+    text-align: left;
+}

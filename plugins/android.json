@@ -1,0 +1,43 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-datepicker": {
+            "PACKAGE_NAME": "org.poma.pomaprofile"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "org.poma.pomaprofile"
+        },
+        "cordova-plugin-http2": {
+            "PACKAGE_NAME": "org.poma.pomaprofile"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "org.poma.pomaprofile"
+        },
+        "cordova-plugin-ionic-webview": {
+            "PACKAGE_NAME": "org.poma.pomaprofile"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "org.poma.pomaprofile"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "org.poma.pomaprofile"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "org.poma.pomaprofile"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "org.poma.pomaprofile"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "org.poma.pomaprofile"
+        }
+    }
+}

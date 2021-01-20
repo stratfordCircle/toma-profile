@@ -1,0 +1,89 @@
+<ion-content class="no-scroll">
+<div class="cert-style">
+<ion-grid text-wrap>
+  <br /><br />
+  <ion-row justify-content-center class="row-align-bottom" bottom>
+        <img src="../../assets/imgs/TOMAlogo.jpg" height="65">
+  </ion-row>
+
+  <ion-row text-center class="cert-header">
+    <ion-col><b>
+      {{this.associationName}}  <br /><br />
+      Certificate of Completion
+    </b>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      {{this.introContent}}
+      <br /><br />
+    </ion-col>
+  </ion-row>
+
+  <ion-row text-center>
+    <ion-col>
+      <b>
+        The {{ this.associationName }} confirms that <br />
+        <div class="help-color" *ngIf="!this.token_last">
+          <i>retrieving member name...</i>
+        </div>
+        {{ this.token_first }}{{ this.token_last }}{{ this.token_suffix }}{{ this.token_credential }} <br />
+        has attended the {{this.longConferenceName}}, <br />
+        held {{this.dateAndLocation}}  <br />
+        and has been awarded the following credits:<br />
+
+        <br />
+
+        {{ this.total_1A }} Category 1A AOA CME credits, which includes
+        {{ this.total_ME_1A }} Medical Ethics AOA CME credits, and
+        {{ this.total_RM_1A }} Risk Management credits applicable to Texas licensure requirements.
+      </b>
+
+      <br />
+      <br />
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col text-center>
+      TOMA is accredited by the American Osteopathic Association to provide
+      osteopathic continuing medical education for physicians. The {{this.longConferenceName}} has been planned and
+      implemented in accordance with the accreditation requirements and policies
+      of the AOA Council on Continuing Medical Education.
+      <br />
+      <br />
+      {{this.endContent}}
+      <br />
+      <br />
+      {{this.inquiryInfo}} <a href="{{this.mailTo}}" target="_top">{{this.mailTo}}</a>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<br />
+<br />
+<br />
+
+<div class="navButtons">
+  <button
+    type="reset"
+    bottom
+    ion-button
+    small
+    right
+    color="primary"
+    (click)="printPage()"
+  >
+    Print
+  </button>
+
+  <br /><br />
+
+  <button ion-button small onclick="window.history.back();">
+    Back
+  </button>
+</div>
+<br /><br />
+</div>
+
+</ion-content>

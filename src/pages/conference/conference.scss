@@ -1,0 +1,96 @@
+@page {
+    margin: 0mm;
+    align: center;
+    overflow: hidden;
+}
+
+@media print {
+
+    header nav, footer {
+        display: none;
+    }
+
+    @page {
+        margin: 0mm 15mm 0mm 15mm;  
+        align: center;
+        overflow: hidden;
+    }
+
+     .navButtons {
+        display: none;
+    }
+
+    /*     .cert-style {
+        overflow: hidden;
+    }
+    */
+
+   /*     
+    .footer,
+    #non-printable {
+        display: none !important;
+    }
+    #printable {
+        display: none !important; //display: block;
+    } */
+
+}
+
+page-conference {
+
+    .no-scroll .scroll-content{
+        overflow: hidden;
+   }
+
+     @media (min-width: 1000px) {
+
+        .cert-style {
+        width: 1000px;
+        //margin: 50px;
+        text-align: center;
+        //overflow: hidden;
+        position: relative;
+        }
+
+/*         .scroll-content {
+            overflow:hidden;
+        }      
+
+        .summary {
+            overflow-y:auto;
+        } */
+
+    }
+
+
+
+/*   @media print{
+  
+    body, .app-root, .split-pane, .ion-page, ion-app, ion-nav { contain: none; }
+    body, ion-nav{ overflow: initial; }
+    body{ position: static; }
+  
+    [ion-content-print]{ overflow-y: visible !important; position: relative; }
+  } */
+    
+    
+
+    .menu-arrows {
+        font-size: 44px;
+        color: map-get($colors, client-primary);
+        vertical-align: bottom
+    }
+
+    .conferenceLabel {
+        text-align: left;
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+    .checkbox-icon {
+        font-size: 10px;
+    }  
+
+}
+
+

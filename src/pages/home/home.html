@@ -1,0 +1,668 @@
+<ion-header>
+  <ion-navbar class="navbarStyle" hideBackButton="true">
+    <ion-title>
+      <ion-label class="print-greeting-landing" text-wrap>
+        <ion-row>
+          <ion-col col-bottom col-4>
+              <img src="../../assets/imgs/TOMAlogo.jpg" height="65">
+          </ion-col>
+          <ion-col col-bottom col-8>CME {{ this.greeting }}</ion-col>
+        </ion-row>
+      </ion-label>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<BR>
+<BR>
+<ion-content>
+
+<!--     <ion-row text-center>
+        <button stacked bottom type="submit" ion-button small block color="secondary">
+          Current Cycle
+        </button>
+      </ion-row>
+        <ion-row text-center>
+          <div style="font-size: 10px">(click for previous cycle)</div>
+          </ion-row> -->
+
+  <div *ngIf="this.checkUserMB">
+
+    <form [formGroup]="searchMemberForm" (submit)="retrieveCollection($event)">
+      <ion-grid text-wrap>
+          <!-- <ion-row class="row-align-bottom" bottom *ngIf="!this.isAdmin">
+              <ion-col col-3 *ngIf="this.printOption">
+                <img src="../../assets/imgs/TOMAlogo.jpg" height="65">
+              </ion-col>
+              <ion-col col-9></ion-col>
+          </ion-row> -->
+        <ion-row class="row-align-bottom" bottom *ngIf="this.isAdmin">
+          <ion-col col-3 *ngIf="this.printOption">
+           <!--  <img src="../../assets/imgs/TOMAlogo.jpg" height="65"> -->
+          </ion-col>
+
+          <ion-col col-2 *ngIf="this.printOption">
+            <ion-label stacked>AOA Number:</ion-label>
+            <ion-input class="selector-search-columns" type="text" formControlName="member_id" [(ngModel)]="member_id"></ion-input>
+          </ion-col>
+
+          <ion-col col-2 *ngIf="this.printOption">
+            <ion-label stacked>Approval:</ion-label>
+            <ion-select class="selector-search-columns" formControlName="approvalSearch" [(ngModel)]="approvalSearch">
+              <ion-option value="All">All</ion-option>
+              <ion-option value="No">No</ion-option>
+              <ion-option value="Yes">Yes</ion-option>
+              <ion-option value="Open">Open</ion-option>
+            </ion-select>
+          </ion-col>
+
+          <ion-col col-2 *ngIf="this.printOption">
+            <ion-label stacked>Start Date:</ion-label>
+            <ion-datetime class="selector-search-columns" formControlName="start_date" displayFormat="MM/DD/YYYY" [(ngModel)]="start_date"></ion-datetime>
+          </ion-col>
+
+          <ion-col col-2 *ngIf="this.printOption">
+            <ion-label stacked>End Date:</ion-label>
+            <ion-datetime class="selector-search-columns" formControlName="end_date" displayFormat="MM/DD/YYYY" [(ngModel)]="end_date"></ion-datetime>
+          </ion-col>
+
+          <ion-col col-1 *ngIf="this.printOption">
+
+            <button stacked bottom type="submit" ion-button small block color="secondary">
+              Get
+            </button>
+
+            <button type="reset" bottom ion-button small block color="primary">
+              Clear
+            </button>
+
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+    </form>
+
+  </div>
+
+  <!-- <ion-item> --> <!-- *ngIf="this.checkUserFB" -->
+    <ion-item *ngIf="!this.printOption">
+
+      <ion-row >
+          <ion-col col-6>
+            <img src="../../assets/imgs/TOMAlogo.png" height="65">
+          </ion-col>
+          <ion-col col-6></ion-col>
+        </ion-row>
+
+        <ion-row *ngIf="!this.printOption">
+          <ion-col>
+            <ion-label class="print-greeting"> {{ this.greeting }} </ion-label>
+          </ion-col>
+        </ion-row>
+
+      </ion-item>
+
+        <ion-item>
+
+    <ion-row>
+      <!-- *ngIf="this.resultsExist" -->
+      <ion-col col-10 text-wrap>
+          <span *ngIf="!this.printOption">
+              <br>
+            </span>
+        <strong>Approved Credit Totals by Category to Date / Total Required &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span *ngIf="!this.printOption">
+            <br>
+          </span>
+          CYCLE: (January 1, 2019 - December 31, 2021) <!-- <select>
+            <option><i>(Nov 1, 2016-Oct 31, 2018)</i></option>
+            <option>(Nov 1, 2018-Oct 31, 2020)</option>
+          </select> -->
+<!--           <ion-select >
+              <ion-option value="No">No</ion-option>
+              <ion-option value="Yes">Yes</ion-option>
+              <ion-option value="Open">Open</ion-option>
+          </ion-select> -->
+
+<!--           <i>(Nov 1, 2016-Oct 31, 2018)</i> -->
+        </strong>
+      </ion-col>
+      
+        <ion-col col-2> <!-- </ion-col> *ngIf="((!this.conferenceRecordsExist) && !this.isAdmin)"> -->
+        <!-- <ion-label>Filter Conference:</ion-label> -->
+        
+         <!--  <ion-item>
+            <ion-label>Filter Conference:</ion-label>
+          </ion-item> -->
+ <!--            <ion-select (ionChange)="setConferenceCollection($event)">
+              <ion-option selected="{{isNoConference}}" value=""><i>Filter by Conference</i></ion-option>
+              <ion-option selected="{{is63rdMidWinter}}" value="63rd MidWinter Conference"><i>63rd MidWinter Conference</i></ion-option>
+              
+            </ion-select> 
+ -->
+        </ion-col>
+ <!--      <ion-col col-2> -->
+        <!-- <div class="help-color" (click)="largerHelp()">Credit Type Definitions</div> -->
+        <!--     <button
+              ion-button
+              small
+              block
+              color="primary"
+              (click)="largerHelp()">
+              Credit Type Details
+            </button> -->
+<!--       </ion-col> -->
+    </ion-row>
+
+  </ion-item>
+
+<!--      <ion-row>
+      <ion-col col-12>
+          <ion-label>Filter Conference:</ion-label>        
+      </ion-col>
+    </ion-row> -->
+
+    <ion-item>
+
+    <ion-row>
+      <ion-col col-7 text-wrap>Total Category 1A Credits to Date:
+        <div *ngIf="this.printOption" class="tooltip">&nbsp;&nbsp;&nbsp;
+          <ion-icon class="help-color" name="help-circle"></ion-icon>
+          <span class="tooltiptext">Credit Types include: 1A, ME_1A, RM_1A</span>
+        </div>
+      </ion-col>
+      <ion-col col-3>
+        <div *ngIf="this.totals_1A >= 30" class="requirementsMetColor">{{this.totals_1A}} / 30</div>
+        <div *ngIf="this.totals_1A < 30">{{this.totals_1A}} / 30</div>
+      </ion-col>
+      <ion-col col-2></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-7 text-wrap>Total Medical Ethics Credits to Date:
+        <div *ngIf="this.printOption" class="tooltip">&nbsp;&nbsp;&nbsp;
+          <ion-icon class="help-color" name="help-circle"></ion-icon>
+          <span class="tooltiptext">Credit Types include: ME_1A</span>
+        </div>
+      </ion-col>
+      <ion-col col-3>
+        <div *ngIf="this.totals_1A >= 2" class="requirementsMetColor">{{this.totals_ME_1A}} / 2</div>
+        <div *ngIf="this.totals_1A < 2">{{this.totals_ME_1A}} / 2</div>
+      </ion-col>
+      <ion-col col-2></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-7 text-wrap>Total Risk Management Credits to Date:
+        <div *ngIf="this.printOption" class="tooltip">&nbsp;&nbsp;&nbsp;
+          <ion-icon class="help-color" name="help-circle"></ion-icon>
+          <span class="tooltiptext">Credit Types include: RM_1A</span>
+        </div>
+      </ion-col>
+      <ion-col col-3>
+        <div >{{this.totals_RM_1A}}</div>
+      </ion-col>
+      <ion-col col-2></ion-col>
+    </ion-row>    
+    
+    <!-- <ion-row>
+      <ion-col col-7 text-wrap>Total Patient Safety Credits to Date:
+        <div *ngIf="this.printOption" class="tooltip">&nbsp;&nbsp;&nbsp;
+          <ion-icon class="help-color" name="help-circle"></ion-icon>
+          <span class="tooltiptext">Credit Types include: PS_1, PS_1B, PS_2A, PS_2B</span>
+        </div>
+      </ion-col>
+      <ion-col col-3>
+        <div *ngIf="this.totals_PS >= 12" class="requirementsMetColor">{{this.totals_PS}} / 12</div>
+        <div *ngIf="this.totals_PS < 12">{{this.totals_PS}} / 12</div>
+      </ion-col>
+      <ion-col col-2></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-7 text-wrap>Total Child Abuse Education Credits to Date:
+        <div *ngIf="this.printOption" class="tooltip">&nbsp;&nbsp;&nbsp;
+          <ion-icon class="help-color" name="help-circle"></ion-icon>
+          <span class="tooltiptext">Credit Types include: CA_1A, CA_1B, CA_2A, CA_2B</span>
+        </div>
+      </ion-col>
+      <ion-col col-3>
+        <div *ngIf="this.totals_CA >= 2" class="requirementsMetColor">{{this.totals_CA}} / 2</div>
+        <div *ngIf="this.totals_CA < 2">{{this.totals_CA}} / 2</div>
+      </ion-col>
+      <ion-col col-2></ion-col>
+    </ion-row>  
+
+    <ion-row>
+      <ion-col col-7 text-wrap>Total Opioid Education Credits to Date:
+        <div *ngIf="this.printOption" class="tooltip">&nbsp;&nbsp;&nbsp;
+          <ion-icon class="help-color" name="help-circle"></ion-icon>
+          <span class="tooltiptext">Credit Types include: OP_1A, OP_1B, OP_2A, OP_2B</span>
+        </div>
+      </ion-col>
+      <ion-col col-3>
+        <div *ngIf="this.totals_OP >= 2" class="requirementsMetColor">{{this.totals_OP}} / 2</div>
+        <div *ngIf="this.totals_OP < 2">{{this.totals_OP}} / 2</div>
+      </ion-col>
+      <ion-col col-2></ion-col>
+    </ion-row> -->
+
+  <!-- </ion-item> -->
+
+  
+    <ion-row>
+      <ion-col col-7 text-wrap>Total Other Credits to Date:
+        <div *ngIf="this.printOption" class="tooltip">&nbsp;&nbsp;&nbsp;
+          <ion-icon class="help-color" name="help-circle"></ion-icon>
+          <span class="tooltiptext">Credit Types include: 1B, 2A, 2B, Other</span>
+        </div>
+      </ion-col>
+      <ion-col col-3>
+        <div>{{this.totals_Other}}</div>
+      </ion-col>
+      <ion-col col-2></ion-col>
+    </ion-row>
+  
+
+  
+    <ion-row>
+      <ion-col col-7>Total Approved CME Credits to Date:</ion-col>
+      <ion-col col-3>
+        <div [ngClass]="this.totalCredits >= 120 ? 'requirementsMetColor': ''">
+          {{this.totalCredits}} / 120 *
+        </div>
+      </ion-col>
+      <ion-col col-2>
+        <div *ngIf="this.printOption" class="help-color" (click)="largerHelp()">
+          <ion-icon class="help-color" name="help-circle"></ion-icon> &nbsp;Credit Types</div>
+      </ion-col>
+    </ion-row>
+    </ion-item>
+    <!-- <ion-row>
+        <ion-select (ionChange)="setConferenceCollection($event)">
+          <ion-option selected="{{isNoConference}}" value=""><i>Filter by Conference</i></ion-option>
+          <ion-option selected="{{is63rdMidWinter}}" value="63rd MidWinter Conference"><i>63rd MidWinter Conference</i></ion-option>
+          
+        </ion-select>       
+      </ion-row>    -->
+            <!-- <ion-label>Filter Conference:</ion-label> -->
+<!--         <ion-row>
+            <ion-select (ionChange)="setConferenceCollection($event)">
+              <ion-option selected="{{isNoConference}}" value=""><i>Filter by Conference</i></ion-option>
+              <ion-option selected="{{is63rdMidWinter}}" value="63rd MidWinter Conference"><i>63rd MidWinter Conference</i></ion-option>
+              
+            </ion-select>       
+          </ion-row>    -->     
+          <!-- this.checkUserFB: {{this.checkUserFB}}
+          this.printOption: {{this.printOption}}
+          this.tempTestCheck: {{this.tempTestCheck}}
+          this.conferenceRecordsExist: {{this.conferenceRecordsExist}} -->
+
+<ion-item>
+          <ion-row *ngIf="!this.printOption">
+            <ion-col col-4></ion-col>
+            <ion-col col-8>* NOTE: Some credits belong to two categories.</ion-col>
+          </ion-row>
+          
+        <ion-row *ngIf="this.checkUserFB && this.printOption">  <!-- CAN BE USED FOR LIMITING TO TEST USER ACCOUNTS && this.tempTestCheck -->
+          <ion-col col-2 *ngIf="!this.conferenceRecordsExist">
+            <ion-label>Filter by Conference:</ion-label>
+          </ion-col> 
+          <ion-col col-5 *ngIf="!this.conferenceRecordsExist">
+                  <ion-select (ionChange)="setConferenceCollection($event)">
+                  <!-- <ion-select (ionChange)="attestPage($event)"> -->
+                  <ion-option selected="{{isNoConference}}" value=""><i></i></ion-option>
+                  <ion-option selected="{{is63rdMidWinter}}" value="63rd MidWinter Conference"><i>63rd MidWinter Conference</i></ion-option>
+                  <ion-option selected="{{isTOMA_12thAC}}" value="TOMA/TXACOFP 12th Annual Convention"><i>TOMA/TXACOFP 12th Annual Convention</i></ion-option>
+                  <ion-option selected="{{is64thMidWinter}}" value="64th MidWinter Conference"><i>64th MidWinter Conference</i></ion-option>
+                </ion-select>       
+          
+          </ion-col>
+            <ion-col col-5 *ngIf="this.checkUserFB">
+              
+              * NOTE: Some credits belong to two categories.
+            
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="!this.printOption">
+          <ion-col col-4></ion-col>
+          <ion-col col-8>* NOTE: Some credits belong to two categories.</ion-col>
+        </ion-row>
+        
+        <ion-row>
+          <ion-col col-3 *ngIf="this.printOption">
+    <!-- ==>        {{this.ca_2018}} {{this.pofps_2018}} {{this.isAdmin}} -->
+
+
+            <button *ngIf="((this.mw_2019 || this.ttac12 || this.mw_2020) && !this.isAdmin)" ion-button small blockblock color="secondary" (click)="certificatePage()">
+              View Certificates
+            </button>
+            <button *ngIf="this.isAdmin" ion-button small blockblock color="secondary" (click)="certificatePage()">
+              Search Certificates
+            </button> <br>
+<!--             <button *ngIf="this.isAdmin || this.ttac12" ion-button small blockblock color="client-primary" (click)="attestPage('TOMA/TXACOFP 12th Annual Convention')">
+              TOMA/TXACOFP 12th Annual Convention Attestation
+            </button> -->
+            <!-- REMOVE tempTestCheck WHEN READY TO GO LIVE -->
+<!--             <button *ngIf="this.isAdmin || this.mw_2020" ion-button small blockblock color="client-primary" (click)="attestPage('64th MidWinter Conference')">
+              64th MidWinter Conference
+            </button> -->
+<!--             <button *ngIf="this.isAdmin" ion-button small blockblock color="secondary" (click)="attestPage()">
+              Only Admins can see this
+            </button> -->        
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </ion-col>
+          <ion-col col-1></ion-col>
+          <ion-col col-3 *ngIf="this.printOption">
+            <!-- <div class=help-color *ngIf="this.slast_name">
+              <b>Member Records Found For:</b> <br> <i> {{this.sfirst_name}} {{this.smiddle_name}} {{this.slast_name}} </i>
+            </div>
+            <div class=help-color *ngIf="!this.slast_name && this.resultsExist && this.isAdmin && !this.hideName">
+                <i>retrieving member name...</i>
+            </div> -->
+    
+            <!-- <button *ngIf="this.pofps_2018 || this.isAdmin" ion-button small blockblock color="secondary" (click)="certificatePage('pofps_2018')">
+              POFPS 2018 CME Symposium Cert
+            </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+          </ion-col>
+    <!--       <ion-col col-5 *ngIf="this.checkUserFB">* NOTE: Some credits belong to two categories.</ion-col> -->
+        </ion-row>
+        
+      </ion-item>
+  <div *ngIf="this.printOption">
+    <div *ngIf="this.resultsExist">
+    <div *ngIf="this.isAdmin">
+      <table *ngIf="this.resultsExist" id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+            <th class="dt-align">CE Date</th>
+            <th class="dt-align">AOA Number</th>
+            <th class="dt-align">Description</th>
+            <th class="dt-align">Accreditor</th>
+            <th class="dt-align">Hours</th>
+            <th class="dt-align">Category</th>
+            <th class="dt-align">Approved</th>
+            <th class="dt-align">Document</th>
+            <th class="dt-delete"></th>
+            <th class="dt-view"></th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+    <div *ngIf="!this.isAdmin">
+      <table *ngIf="this.resultsExist" id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+
+            <th class="dt-align">CE Date</th>
+            <th class="dt-align">AOA Number</th>
+            <th class="dt-align">Description</th>
+            <th class="dt-align">Accreditor</th>
+            <th class="dt-align">Hours</th>
+            <th class="dt-align">Category</th>
+            <th class="dt-align">Approved</th>
+            <th class="dt-align">Document</th>
+            <th class="dt-view"></th>
+
+          </tr>
+        </thead>
+      </table>
+    </div>
+    </div>
+  </div>
+
+  <div *ngIf="this.checkUserMB">
+
+    <!-- <ion-grid> -->
+
+      <ion-item>
+
+      <div *ngIf="!this.printOption">
+<!--         <ion-row>
+          <ion-col col-6>
+            <img src="../../assets/imgs/poma.png" height="65">
+          </ion-col>
+          <ion-col col-6></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label class="print-greeting"> {{ this.greeting }} </ion-label>
+          </ion-col>
+        </ion-row> -->
+
+        <!-- <div class="ramalama">
+          <h1>RAMALAMA</h1>
+        </div> -->
+
+        <ion-row responsive-md class="ion-row-poma-secondary-color">
+          <ion-col class="print-labels" col-2>CE Date</ion-col>
+          <ion-col class="print-labels" col-2>AOA Number</ion-col>
+          <ion-col class="print-labels" col-3>Description</ion-col>
+          <ion-col class="print-labels" col-2>Accreditor</ion-col>
+          <!-- <ion-col class="print-labels" col-1>Hours</ion-col> -->
+          <ion-col class="print-labels" col-1>Type</ion-col>
+          <ion-col class="print-labels" col-2>Approved</ion-col>
+        </ion-row>
+
+        <ion-row text-wrap class="row-custom-bg check-break usefulPrintSize" responsive-md bottom *ngFor="let location of locations">
+          <ion-col col-2>{{ location.ce_date | date:'MM/dd/yyyy' }}</ion-col>
+          <ion-col col-2>{{ location.aoa_number }}</ion-col>
+          <ion-col col-3>{{ location.description }}</ion-col>
+          <ion-col col-2>{{ location.accreditor }}</ion-col>
+          <!-- <ion-col col-1>{{ location.hours_total }}</ion-col> -->
+          <ion-col col-1>{{ location.credit_multi }}</ion-col>
+          <!-- , {{ location.credit_type2 }}, {{ location.credit_type3 }} -->
+          <ion-col col-2>{{ location.hours_total_approved }}</ion-col>
+        </ion-row>
+      </div>
+    </ion-item>
+<ion-item>
+      <ion-row style="border: 0px;" *ngIf="this.printOption">
+        <ion-col col-2>
+          <button ion-button small block color="primary" (click)="addDocument()">
+            Add a new record
+          </button>
+        </ion-col>
+        <ion-col col-2></ion-col>
+        <ion-col col-3></ion-col>
+        <!-- *ngIf="!this.isAdmin" -->
+        <!-- <ion-col col-1 *ngIf="this.isAdmin">
+      <button
+      ion-button
+      small
+      block
+      color="primary"
+      (click)="flipCollection()">
+   	  Change DB
+   </button>
+  </ion-col>
+  <ion-col col-2 align-self-center *ngIf="this.isAdmin"><b>DB:</b> {{this._COLL}} </ion-col> -->
+        <ion-col col-1></ion-col>
+        <ion-col col-2></ion-col>
+        <ion-col col-2>
+
+          <button ion-button small block color="primary" (click)="resetDataGrid()">
+            Refresh
+          </button>
+        </ion-col>
+
+      </ion-row>
+    </ion-item>
+    <!-- </ion-grid> -->
+  </div>
+
+<div *ngIf="this.printOption">
+  <ion-item *ngIf="this.isAdmin">
+    <ion-row class="requirementsMetColor" *ngIf="this.isAdmin">
+      <ion-col col-4></ion-col>
+      <ion-col col-4>{{this.adminRecordsNote}}</ion-col>
+      <ion-col col-4></ion-col>
+    </ion-row>
+  </ion-item>
+</div>
+
+  
+   <!--  <ion-row>
+      <ion-col col-3 *ngIf="this.printOption">
+        <button *ngIf="this.ca_2018 || this.isAdmin" ion-button small blockblock color="secondary" (click)="certificatePage('ca_2018')">
+          Cert
+        </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </ion-col>
+      <ion-col col-1></ion-col>
+      <ion-col col-3 *ngIf="this.printOption">
+        <button *ngIf="this.pofps_2018 || this.isAdmin" ion-button small blockblock color="secondary" (click)="certificatePage('pofps_2018')">
+          Cert II
+        </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </ion-col>
+      <ion-col col-5 *ngIf="this.checkUserFB">* NOTE: Some credits belong to two categories.</ion-col>
+    </ion-row> -->
+
+    <div *ngIf="this.printOption">
+
+    <ion-item *ngIf="this.printOption">
+    <ion-row>
+    <ion-col col-3 *ngIf="this.printOption">
+        <button type="reset" bottom ion-button small right color="client-primary" (click)="printPage()">
+          Print Report
+        </button>
+      </ion-col>
+    <ion-col col-3 *ngIf="this.printOption">
+        <button bottom ion-button small right color="client-primary" (click)="logoutfromCMETracker()">
+          Sign Off
+        </button>
+      </ion-col>
+      <ion-col col-6>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+  <br>
+  <br>
+
+  <ion-item *ngIf="this.isAdmin">
+    <!-- <ion-row *ngIf="this.isAdmin">
+      <ion-col>
+        <input type="text" id="currentUserField">
+        <button small ion-button (click)="setCurrentUser()">Set Cert ID</button>
+      </ion-col>
+    </ion-row> -->
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</ion-item>
+</div>
+
+  <ion-row *ngIf="this.printOption">
+    <ion-col col-4>
+      <button *ngIf="this.isAdmin" ion-button block color="light" (click)="exportDatabase()">
+        Backup/Export Database to File
+      </button>
+    </ion-col>
+    <ion-col col-1></ion-col>
+    <ion-col col-4>
+      <button *ngIf="this.isAdmin" ion-button block color="danger" (click)="insertFirebasefromGoogleSheets()">
+        Import Current Google Sheet
+      </button>
+    </ion-col>
+    <ion-col col-1></ion-col>
+  </ion-row>
+
+<!--   <div>
+    <button ion-button (click)="runBackUpBatches()">
+      runBackUpBatches
+    </button>
+  </div>  -->
+  
+  <ion-row *ngIf="this.printOption">
+    <ion-col col-4>
+      <button *ngIf="this.isAdmin" ion-button block color="light" (click)="updateFirebasefromGoogleSheets()">
+        Update Records from Google Sheet
+      </button>
+    </ion-col>
+    <ion-col col-1></ion-col>
+    <ion-col col-4>
+     <!-- <button *ngIf="this.isAdmin" ion-button block color="danger" (click)="indexTest()">
+     Index Test   
+      </button> -->
+    </ion-col>
+    <ion-col col-1></ion-col>
+  </ion-row>
+
+
+  <ion-row *ngIf="this.printOption">
+    <ion-col col-4>
+    </ion-col>
+    <ion-col col-1></ion-col>
+    <ion-col col-4>
+     <!--  <button *ngIf="this.isAdmin" ion-button block color="danger" (click)="insertFirebasePOFPSattestationRecordsfromGoogleSheets()">
+        Import and Convert POFPS (Attestation Format)
+      </button> -->
+    </ion-col>
+    <ion-col col-1></ion-col>
+  </ion-row>
+
+</ion-content>

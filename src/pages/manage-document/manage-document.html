@@ -1,0 +1,279 @@
+<ion-header>
+  <ion-navbar color="client-primary">  <!-- hideBackButton="true" -->
+    <ion-title>
+
+      <ion-label text-wrap>
+      {{ title }}<ion-buttons end><button ion-button (click)="HomePage()">Home</button></ion-buttons>
+    </ion-label>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<!-- TODO: REMOVED THE REQUIRED DOCUMENTATION, BUT NEEDS TO BE REQUIRED FOR NON-TOMA CREDITS -->
+<!-- TODO: NEED TO ADD A CERTIFICATE -->
+
+<ion-content>
+  <form [formGroup]="form" (submit)="saveDocument($event)"> 
+
+    <ion-item *ngIf="this.isAdmin">
+
+    <ion-label *ngIf="this.isAdmin || this.approval == 'No' || this.approval == 'Yes' || this.approval == 'All' || this.approval == 'Open'" stacked>Admin Approval: {{this.approval}}</ion-label>
+
+    <!-- <ion-label *ngIf="this.isAdmin == 'exists'" stacked>Admin Approval: pending</ion-label> -->
+
+    <ion-select *ngIf="this.isAdmin" formControlName="approval" [(ngModel)]="approval">
+        <ion-option value="No">No</ion-option>
+        <ion-option value="Yes">Yes</ion-option>
+        <ion-option value="Open">Open</ion-option>
+    </ion-select>
+
+    </ion-item>
+
+    <ion-item *ngIf="this.isAdmin">
+ 
+    <ion-label stacked>Admin Explanation: -- created/updated by: {{this.created_by}}</ion-label>
+    <ion-input disabled="{{ isDisabled }}" type="text" formControlName="approval_reason" [(ngModel)]="approval_reason"></ion-input>
+
+    </ion-item>
+
+<!--     <ion-input type="text" formControlName="name" (focusout)="onBlur()"></ion-input> --> 
+
+    <ion-item>
+      <ion-label stacked>AOA Number: <!-- <div *ngIf="!this.isAdmin"> {{ this.aoa_number }}  </div> --> </ion-label>
+      <ion-input disabled="{{ disableAOA_Number }}" type="text" formControlName="aoa_number" [(ngModel)]="aoa_number" (ionBlur)='changeNumber()'></ion-input>
+     </ion-item>
+
+    <ion-item>
+      <ion-label stacked *ngIf="this.ce_date == ''">CE Date: <ion-icon name="medical" class="icon-required"></ion-icon></ion-label>
+      <ion-label stacked *ngIf="this.ce_date != ''" style="font-weight: 600; font-size: 16px;" >CE Date: {{this.ce_date | date: 'MM/dd/yyyy'}} <div *ngIf="this.isAdmin">(click to update)</div> </ion-label>
+      <ion-datetime  disabled="{{ isDisabled }}" formControlName="ce_date" displayFormat="MM/DD/YYYY" [(ngModel)]="ce_date"></ion-datetime> <!-- min="2016-11-1" max="2018-10-31" -->
+    </ion-item>
+
+   <!--  
+     <ion-item>
+        <ion-label stacked *ngIf="this.date_entered == ''">CE Date Entered: <ion-icon name="medical" class="icon-required"></ion-icon></ion-label>
+        <ion-label stacked *ngIf="this.date_entered != ''" style="font-weight: 600; font-size: 16px;" >CE Date Entered: {{this.date_entered | date: 'MM/dd/yyyy'}} <div *ngIf="this.isAdmin">(click to update)</div> </ion-label>
+        <ion-datetime disabled="{{ isDisabled }}" formControlName="date_entered" displayFormat="MM/DD/YYYY" [(ngModel)]="date_entered"></ion-datetime>
+     </ion-item> 
+   -->
+
+    <ion-item>
+      <ion-label stacked>Accreditor: <ion-icon name="medical" class="icon-required"></ion-icon></ion-label>
+      <ion-select id="accreditor" (select)="setAccreditor($event)" disabled="{{ isDisabled }}" formControlName="accreditor" [(ngModel)]="accreditor">
+          <ion-option value="TOMA">TOMA</ion-option>
+          <ion-option value="AOA">AOA</ion-option>
+          <ion-option value="Other">Other</ion-option>
+        </ion-select>
+ <!--      <ion-input type="text" formControlName="accreditor"></ion-input> -->
+    </ion-item>
+    
+    <ion-row>
+      <ion-col col-2>
+          <ion-item>
+        <ion-label stacked>Credit Type: <ion-icon name="medical" class="icon-required"></ion-icon></ion-label>
+        <ion-select disabled="{{ isDisabled }}" formControlName="credit_type1" [(ngModel)]="credit_type1">
+
+            <ion-option value="1A">1A</ion-option>
+            <ion-option value="ME_1A">ME_1A</ion-option>
+            <ion-option value="RM_1A">RM_1A</ion-option>
+            <ion-option value="ME_1A, RM_1A">ME_1A, RM_1A</ion-option>
+            <ion-option value="1B">1B</ion-option>
+            <ion-option value="2A">2A</ion-option>
+            <ion-option value="2B">2B</ion-option>
+            <ion-option value="Other">Other</ion-option>
+
+          </ion-select>
+          </ion-item>
+      </ion-col>
+      <ion-col col-2>
+        <ion-item>
+        <ion-label stacked>Hours:<!--  (in quarter hour increments such as: .25,.50,.75) --> <ion-icon name="medical" class="icon-required"></ion-icon></ion-label>
+        <!-- <div *ngIf="!this.memberEditAsConference">disabled -->
+          <ion-input *ngIf="this.memberEditAsConference" min=".25" max="100" step=".25" type="number" formControlName="hours1" [(ngModel)]="hours1"></ion-input>
+          <ion-input *ngIf="!this.memberEditAsConference" disabled="{{ isDisabled }}" min=".25" max="100" step=".25" type="number" formControlName="hours1" [(ngModel)]="hours1"></ion-input>
+        <!-- </div> -->
+       <!--  <div *ngIf="this.memberEditAsConference">not 
+          <ion-input min=".25" max="100" step=".25" type="number" formControlName="hours1" [(ngModel)]="hours1">222</ion-input>
+        </div>         -->
+    </ion-item>
+      </ion-col>
+      <ion-col col-2> <ion-item>
+        <ion-label stacked>Approved:</ion-label>
+        <ion-input disabled="{{ isDisabled }}" min=".25" max="100" step=".25" type="number" formControlName="hours_approved1" [(ngModel)]="hours_approved1"></ion-input>        
+      </ion-item></ion-col>
+      <ion-col col-6></ion-col>
+     <!--  <ion-col col-2>
+        <ion-item>
+        <ion-label stacked>Credit Type:</ion-label>
+      <ion-select disabled="{{ isDisabled }}" formControlName="credit_type2" [(ngModel)]="credit_type2">
+          
+            <ion-option value="1A">1A</ion-option>
+            <ion-option value="ME_1A">ME_1A</ion-option>
+            <ion-option value="RM_1A">RM_1A</ion-option>
+            <ion-option value="1B">1B</ion-option>
+            <ion-option value="2A">2A</ion-option>
+            <ion-option value="2B">2B</ion-option>
+            <ion-option value="Other">Other</ion-option>
+            
+        </ion-select>
+      </ion-item>
+      </ion-col>
+      <ion-col col-2>
+        <ion-item>
+        <ion-label stacked>Hours:</ion-label>
+        <ion-input disabled="{{ isDisabled }}" min=".25" max="100" step=".25" type="number" formControlName="hours2" [(ngModel)]="hours2"></ion-input>        
+      </ion-item>
+      </ion-col>
+      <ion-col col-2>
+          <ion-item>
+          <ion-label stacked>Credit Type:</ion-label>
+        <ion-select disabled="{{ isDisabled }}" formControlName="credit_type3" [(ngModel)]="credit_type3">
+            
+          <ion-option value="1A">1A</ion-option>
+          <ion-option value="ME_1A">ME_1A</ion-option>
+          <ion-option value="RM_1A">RM_1A</ion-option>
+          <ion-option value="1B">1B</ion-option>
+          <ion-option value="2A">2A</ion-option>
+          <ion-option value="2B">2B</ion-option>
+          <ion-option value="Other">Other</ion-option>
+            
+          </ion-select>
+        </ion-item>
+        </ion-col>
+        <ion-col col-2>
+          <ion-item>
+          <ion-label stacked>Hours:</ion-label>
+          <ion-input disabled="{{ isDisabled }}" min=".25" max="100" step=".25" type="number" formControlName="hours3" [(ngModel)]="hours3"></ion-input>        
+        </ion-item>
+        </ion-col> -->
+    </ion-row>
+
+<!--     <ion-row *ngIf="this.isAdmin"> -->
+<!--       <ion-col col-2></ion-col>
+      <ion-col col-2> <ion-item>
+        <ion-label stacked>Approved:</ion-label>
+        <ion-input disabled="{{ isDisabled }}" min=".25" max="100" step=".25" type="number" formControlName="hours_approved1" [(ngModel)]="hours_approved1"></ion-input>        
+      </ion-item></ion-col>
+      <ion-col col-8></ion-col> -->
+      <!-- <ion-col col-2></ion-col>
+      <ion-col col-2> <ion-item>
+        <ion-label stacked>Approved:</ion-label>
+        <ion-input disabled="{{ isDisabled }}" min=".25" max="100" step=".25" type="number" formControlName="hours_approved2" [(ngModel)]="hours_approved2"></ion-input>        
+      </ion-item></ion-col>
+      <ion-col col-2></ion-col>
+      <ion-col col-2> <ion-item>
+        <ion-label stacked>Approved:</ion-label>
+        <ion-input disabled="{{ isDisabled }}" min=".25" max="100" step=".25" type="number" formControlName="hours_approved3" [(ngModel)]="hours_approved3"></ion-input>        
+      </ion-item></ion-col> -->
+    <!-- </ion-row> -->
+ 
+   <!--  <ion-item>
+      <ion-label >Credit Type: <ion-icon name="medical" class="icon-required"></ion-icon></ion-label>
+      <ion-select disabled="{{ isDisabled }}" formControlName="credit_type" [(ngModel)]="credit_type">
+          <ion-option value="1A">1A</ion-option>
+          <ion-option value="1A_PS">1A_PS</ion-option>
+          <ion-option value="1B">1B</ion-option>
+          <ion-option value="1B_PS">1B_PS</ion-option>
+          <ion-option value="2A">2A</ion-option>
+          <ion-option value="2A_PS">2A_PS</ion-option>
+          <ion-option value="2B">2B</ion-option>
+          <ion-option value="2B_PS">2B_PS</ion-option>
+          <ion-option value="Act31_1A">Act31_1A</ion-option>
+          <ion-option value="Act31_1B">Act31_1B</ion-option>
+          <ion-option value="Act31_2A">Act31_2A</ion-option>
+          <ion-option value="Act31_2B">Act31_2B</ion-option>
+          <ion-option value="Other">Other</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label >Hours: (in quarter hour increments such as: .25,.50,.75) <ion-icon name="medical" class="icon-required"></ion-icon></ion-label>
+      <ion-input disabled="{{ isDisabled }}" min=".25" max="100" step=".25" type="number" formControlName="hours" [(ngModel)]="hours"></ion-input>
+    </ion-item> -->
+
+    <!-- <ion-item>
+      <ion-label stacked>Delivery Method: <ion-icon name="medical" class="icon-required"></ion-icon></ion-label>
+      <ion-select disabled="{{ isDisabled }}" formControlName="delivery_method" [(ngModel)]="delivery_method">
+          <ion-option value="In Person">In Person</ion-option>
+          <ion-option value="2">Option 2</ion-option>
+          <ion-option value="3">Option 3</ion-option>
+          <ion-option value="4">Option 4</ion-option>
+        </ion-select>
+    </ion-item> -->
+
+    <ion-item>
+      <ion-label stacked>Description: <ion-icon name="medical" class="icon-required"></ion-icon></ion-label>
+          <ion-input disabled="{{ isDisabled }}" type="text" formControlName="description" [(ngModel)]="description"></ion-input>
+    </ion-item>
+    
+   <!--  this.memberEditAsConference: {{this.memberEditAsConference}}
+    isDisabled: {{this.isDisabled}} -->
+    <!-- IF A CONFERENCE - NO DOCUMENTATION REQUIRED -->
+    <ion-item *ngIf="!this.memberEditAsConference">
+        <ion-label stacked>Supporting Documentation: </ion-label>
+        <ion-input disabled="{{ isDisabled }}" type="file" name="file" id="file" multiple accept=".doc,.docx,image/*  " (change)="changeListener($event)"></ion-input> 
+    </ion-item>
+
+    <!-- <ion-item> -->
+<!--     <ion-row>
+      <ion-col col-6>
+          <ion-input disabled="{{ isDisabled }}" type="file" name="file" id="file" multiple accept=".doc,.docx,image/*  " (change)="changeListener($event)"></ion-input> 
+      </ion-col>
+      <ion-col col-6>
+        <ion-label>
+          &nbsp; <ion-icon name="medical" class="icon-required"></ion-icon>
+        </ion-label>
+      </ion-col>
+    </ion-row>
+ -->    <!-- </ion-item> -->
+
+    <div *ngIf="!this.memberEditAsConference" class="progress-outer">
+      <div class="progress-inner" [style.width]="this.loadProgress + '%'">
+        {{this.loadProgress | number:'1.0-0' }}%
+      </div>
+    </div>
+
+            <ion-list>
+              <ion-item *ngIf="this.docList.length != 0">Existing Supporting Documents</ion-item>
+
+    <div *ngIf="this.numFiles > 0;">{{ this.numFiles }} uploaded</div>
+
+    <div *ngFor="let docAddress of docList; let i = index;">
+        <a href="" (click)="OpenImage(docAddress.fullPath);"> {{ docAddress.justName }}</a> 
+    </div>
+            </ion-list>
+
+    <!-- CONDITIONS FOR WHEN WE DO NOT NEED TO VALIDATE FORM         -->
+    <ion-item *ngIf="this.isAdmin">
+        <button class="submit-button" ion-button type="submit">Submit</button>
+    </ion-item>
+
+    <!-- <div *ngIf="((!isDisabled) || this.memberEditAsConference)">  -->
+    
+      <!-- CONDITIONS FOR WHEN TO VALIDATE FORM --> <!-- TOMA NOT REQUIRING SUPPORTING DOCUMENT FOR CONFERENCES -->
+      <ion-item *ngIf="(!this.isAdmin && this.memberEditAsConference)"> <!--   -->
+          <button class="submit-button" ion-button type="submit">Submit</button>
+      </ion-item>  
+
+<!--       <div *ngIf="(!isDisabled) && (!this.isMissingSupportDoc)"> -->
+
+      <ion-item *ngIf="(!this.isAdmin && !this.memberEditAsConference && !isDisabled && !this.isMissingSupportDoc)"> <!--   -->
+        <button class="submit-button" ion-button type="submit" [disabled]="!form.valid">Submit</button>
+    </ion-item>
+
+    <!-- </div> -->
+
+    <ion-item>
+        <ion-label stacked><ion-icon name="medical" class="icon-required"></ion-icon> = required</ion-label>
+        <ion-input type="text" formControlName="supporting_doc"></ion-input>  <!-- [(ngModel)]="supporting_doc" -->
+      </ion-item>    
+      
+      <ion-item *ngIf="this.isAdmin">
+          <h2>Audit Data</h2>
+          <h3>created/updated by: <i>{{this.created_by}}</i></h3>
+          <h3>create method: <i>{{this.created_by_process}}</i></h3>
+          <h3>last updated: <i>{{this.date_created | date: 'dd/MM/yyyy H:mm' }}</i></h3>
+          </ion-item>
+      </form>
+
+</ion-content>

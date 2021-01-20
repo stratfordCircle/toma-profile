@@ -1,0 +1,9 @@
+{
+    "git.ignoreLimitWarning": true,
+    "search.exclude": {
+        "**/.sourcemaps": true,
+        "**/platforms": true,
+        "**/plugins": true,
+        "**/www": true
+    }
+}

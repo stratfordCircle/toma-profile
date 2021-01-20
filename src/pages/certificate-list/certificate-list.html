@@ -1,0 +1,78 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>
+    <ion-row>
+      <ion-col col-11>Certificates</ion-col><ion-col col-1><button ion-button small (click)="HomePage()">Home</button></ion-col>
+    </ion-row> 
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <br>
+  <!--   <ion-grid> -->
+  <ion-row>
+<ion-col col-12 class="descriptiveText">
+  
+    As a TOMA member benefit, CME certificates for TOMA-sponsored CME programs are available for you to retrieve at any time.  Certificates may be viewed, printed or downloaded for your personal records.  To retrieve a certificate, click on the appropriate program button below.
+<br><br>
+ 
+
+    If you have any questions, please contact the TOMA CME Office at (512) 708-8662 or email <a href="mailto:toma@txosteo.org" target="_top">toma@txosteo.org</a>.
+    
+</ion-col>
+
+  </ion-row>
+
+  <br><br><br><br>
+    <ion-row>
+        <ion-col col-3><!--  {{this.quickCheck}} -->
+          <button *ngIf="this.mw_2019" ion-button small blockblock color="secondary" (click)="certificatePage('mw_2019')">
+            TOMA 63rd Midwinter Conference
+          </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </ion-col>
+        <ion-col col-1></ion-col>
+        <!-- <ion-row> -->
+          <ion-col col-3>
+              <button *ngIf="this.ttac12" ion-button small blockblock color="secondary" (click)="getConferencesPage('ttac12')"> <!-- // can change "conferences" to another name or just leave it and pass in new one for new conference -->
+                TOMA/TXACOFP 12th Annual Convention
+              </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </ion-col>
+          <ion-col col-1></ion-col>
+          <ion-col col-3><!--  {{this.quickCheck}} -->
+            <button *ngIf="this.mw_2020" ion-button small blockblock color="secondary" (click)="getConferencesPage('mw_2020')">
+              TOMA 64th Midwinter Conference
+            </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </ion-col>
+        <!-- </ion-row> -->
+<ion-col col-5>
+
+</ion-col>
+
+
+      </ion-row>
+
+      
+    <!-- </ion-grid> -->
+
+      <ion-item *ngIf="this.isAdmin">
+          <form (ngSubmit)="setCurrentUser()">
+          <ion-row>
+              <ion-col col-3>
+                <input type="text" [(ngModel)]="currentUser" id="currentUserField" name="currentUserField">
+              </ion-col>
+              <ion-col col-9></ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col col-2>
+                  <button ion-button small block type="submit">Set Cert ID</button>
+              </ion-col>
+              <ion-col col-10></ion-col>
+          </ion-row>
+        </form>
+      </ion-item>
+
+</ion-content>

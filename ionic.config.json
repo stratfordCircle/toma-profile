@@ -1,0 +1,13 @@
+{
+  "name": "TOMA cme",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/api/v1/profile/me",
+      "proxyUrl": "https://teoma.memberclicks.net/api/v1/profile/me"
+    }
+  ]
+}
